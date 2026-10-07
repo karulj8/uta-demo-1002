@@ -1,104 +1,42 @@
-import type { LocaleObject } from '@nuxtjs/i18n'
+import type { LocaleObject } from "@nuxtjs/i18n";
 
-/** Locale code from i18n configuration. */
 type LocaleCode = LocaleObject['code']
 
 /**
- * Shop and locale configuration for multi-shop storefronts.
- * Defines routing, currency, translations, and regional settings per shop.
+ * Configuration for a shop and its locale settings.
+ *
+ * @typedef ShopAndLocaleConfig
+ * @property locale - A BCP-47 format locale code (e.g. 'de-DE').
+ * @property code - A unique identifying code for the shop/locale.
+ *   Also used to create the shop's default path prefix (e.g. 'de').
+ * @property shopId - The shop's unique identifier.
+ * @property currency - The ISO 4217 currency code for the shop (e.g. 'EUR').
+ * @property isDefault - Flags the current shop as the default.
+ *   - With `path` selection, the default shop will be redirected to when loading the base route.
+ *   - With `path_or_default` selection, the default shop will use the base route itself.
+ * @property translationFile - The file with the translations to load for the shop/locale (relative to /langs).
  */
 interface ShopAndLocaleConfig {
-  /** BCP-47 locale code (e.g., 'de-DE', 'en-US') */
   locale: string
-  /** URL path prefix(es) for the shop (e.g., 'de' or ['en', 'en-us']) */
   code: LocaleCode | LocaleCode[]
-  /** SCAYLE shop identifier */
   shopId: number
-  /** ISO 4217 currency code (e.g., 'EUR', 'USD') */
   currency: string
-  /**
-   * Whether this shop is the default for routing.
-   * With `path` selection the default shop will be redirected to when loading the base route.
-   * With `path_or_default` selection the default shop will use the base route itself
-   */
   isDefault: boolean
-  /** Translation file path relative to `/i18n/locales/` */
   translationFile: string
-  /** ISO 3166-1 alpha-2 country code for regional detection */
   countryCode: string
-
-  /**
-   * Indicates if the shop requires consent management for third party services.
-   * If true, the shop will require the user to consent to the use of third party services.
-   * If false, the shop will not require the user to consent to the use of third party services.
-   * This is used to determine if the consent management module should be enabled for the shop.
-   * @default false
-   */
-  requiresConsentManagement?: boolean
 }
 
 /**
- * Shop configurations for country shops within the Storefront Application and i18n routing.
- * Used to generate shop routes, i18n locales, and regional settings.
+ * List of configurations to be used to define the `shops` list for `storefront-nuxt` and `locales` for `nuxt-i18n`
  */
-export const shops: [ShopAndLocaleConfig, ...ShopAndLocaleConfig[]] = [
+export const shops: ShopAndLocaleConfig[] = [
   {
-    locale: 'de-DE',
-    code: 'de',
-    shopId: 1918,
-    currency: 'EUR',
+    locale: "en-US",
+    code: "us",
+    shopId: 1074,
+    currency: "USD",
     isDefault: true,
-    translationFile: 'de_DE.json',
-    countryCode: 'DE',
-    requiresConsentManagement: true,
-  },
-  {
-    locale: 'en-US',
-    code: ['en', 'en-us'],
-    shopId: 1919,
-    currency: 'USD',
-    isDefault: false,
-    translationFile: 'en_GB.json',
-    countryCode: 'US',
-  },
-  {
-    locale: 'de-CH',
-    code: 'ch',
-    shopId: 1920,
-    currency: 'CHF',
-    isDefault: false,
-    translationFile: 'de_DE.json',
-    countryCode: 'CH',
-    requiresConsentManagement: false,
-  },
-  {
-    locale: 'de-AT',
-    code: 'at',
-    shopId: 1921,
-    currency: 'EUR',
-    isDefault: false,
-    translationFile: 'de_DE.json',
-    countryCode: 'AT',
-    requiresConsentManagement: true,
-  },
-  {
-    locale: 'en-DE',
-    code: 'de-en',
-    shopId: 1965,
-    currency: 'EUR',
-    isDefault: false,
-    translationFile: 'en_GB.json',
-    countryCode: 'DE',
-    requiresConsentManagement: true,
-  },
-  {
-    locale: 'hr-HR',
-    code: 'hr',
-    shopId: 2002,
-    currency: 'EUR',
-    isDefault: false,
-    translationFile: 'en_GB.json',
-    countryCode: 'HR',
-    requiresConsentManagement: true,
-  },
+    translationFile: "en_US.json",
+    countryCode: "US"
+  }
 ]
