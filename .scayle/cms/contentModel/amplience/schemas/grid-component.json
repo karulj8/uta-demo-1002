@@ -1,0 +1,5 @@
+{
+  "body": "./schemas/grid-component-schema.json",
+  "schemaId": "https://scayle.com/schemas/grid-component.json",
+  "validationLevel": "CONTENT_TYPE"
+}

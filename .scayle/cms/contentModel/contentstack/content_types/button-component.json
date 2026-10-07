@@ -1,0 +1,99 @@
+{
+  "title": "Button",
+  "uid": "button-component",
+  "schema": [
+    {
+      "data_type": "text",
+      "display_name": "Title",
+      "field_metadata": {
+        "_default": true,
+        "description": "Title used to organize the content within the CMS.",
+        "version": 3
+      },
+      "mandatory": true,
+      "uid": "title",
+      "unique": true,
+      "multiple": false,
+      "non_localizable": false
+    },
+    {
+      "data_type": "text",
+      "display_name": "URL",
+      "uid": "url",
+      "field_metadata": {
+        "description": "The destination link when the button is clicked. Supports internal pages or external URLs.",
+        "default_value": "",
+        "version": 3
+      },
+      "format": "^((ftp|http|https):\\/\\/|\\/)(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$",
+      "error_messages": {
+        "format": "The url must be a valid URL or relative Path"
+      },
+      "mandatory": true,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "boolean",
+      "display_name": "Open In New Tab",
+      "uid": "open_in_new_tab",
+      "field_metadata": {
+        "description": "Whether to open the link in a new browser tab or not.",
+        "default_value": true
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "text",
+      "display_name": "Text",
+      "uid": "text",
+      "field_metadata": {
+        "description": "The text displayed on the button.",
+        "default_value": "",
+        "version": 3
+      },
+      "format": "",
+      "error_messages": { "format": "" },
+      "mandatory": true,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "text",
+      "display_name": "Style",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": true,
+        "choices": [
+          { "value": "primary", "key": "Primary" },
+          { "value": "secondary", "key": "Secondary" },
+          { "value": "outline", "key": "Outline" },
+          { "value": "accent", "key": "Accent" }
+        ]
+      },
+      "multiple": false,
+      "uid": "style",
+      "field_metadata": {
+        "description": "Visual appearance of the button. Defaults to Primary.",
+        "default_value": "primary",
+        "default_key": "Primary",
+        "version": 3
+      },
+      "mandatory": false,
+      "non_localizable": false,
+      "unique": false
+    }
+  ],
+  "description": "An interactive button that can link to other pages or trigger actions. Use buttons for call-to-action elements like \"Add to Cart\", \"Learn More\", or \"Contact Us\".",
+  "options": {
+    "is_page": false,
+    "singleton": false,
+    "sub_title": [],
+    "title": "title"
+  }
+}

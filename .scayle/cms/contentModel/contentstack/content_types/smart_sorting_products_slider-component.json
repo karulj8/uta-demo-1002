@@ -1,0 +1,142 @@
+{
+  "created_at": "2026-01-02T08:46:09.248Z",
+  "updated_at": "2026-01-20T11:42:46.548Z",
+  "title": "Smart Sorting Products Slider",
+  "uid": "smart_sorting_products_slider-component",
+  "_version": 8,
+  "inbuilt_class": false,
+  "schema": [
+    {
+      "data_type": "text",
+      "display_name": "Title",
+      "field_metadata": {
+        "_default": true,
+        "description": "Title used to organize the content within the CMS.",
+        "version": 3
+      },
+      "mandatory": true,
+      "uid": "title",
+      "unique": true,
+      "multiple": false,
+      "non_localizable": false
+    },
+    {
+      "data_type": "text",
+      "display_name": "Display Title",
+      "uid": "display_title",
+      "field_metadata": {
+        "description": "Heading displayed above the product slider.",
+        "default_value": "",
+        "version": 3
+      },
+      "format": "",
+      "error_messages": { "format": "" },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "text",
+      "display_name": "Smart Sorting Key",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": true,
+        "choices": [
+          { "value": "scayle:v1:sales-push", "key": "Sales Push" },
+          { "value": "scayle:v1:new-arrivals", "key": "New Arrivals" },
+          {
+            "value": "scayle:v1:balanced-offerings",
+            "key": "Balanced Offerings"
+          },
+          {
+            "value": "scayle:v1:inventory-optimization",
+            "key": "Inventory Optimization"
+          },
+          { "value": "scayle:v1:luxury-promotion", "key": "Luxury Promotion" },
+          { "value": "scayle:v1:stock-coverage", "key": "Stock Coverage" },
+          { "value": "scayle:v1:topseller", "key": "Topseller" },
+          { "value": "scayle:v1:revenue-max", "key": "Revenue Max" },
+          { "value": "scayle:v1:recently-popular", "key": "Recently Popular" },
+          { "value": "scayle:v1:trending", "key": "Trending" }
+        ]
+      },
+      "multiple": false,
+      "uid": "smart_sorting_key",
+      "field_metadata": {
+        "description": "SCAYLE Storefront Smart Sorting Key (algorithm) used to automatically select and sort products.",
+        "default_value": "",
+        "default_key": "",
+        "version": 3
+      },
+      "mandatory": true,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "number",
+      "display_name": "Category ID",
+      "uid": "category_id",
+      "field_metadata": {
+        "description": "Limit products to a specific category by entering the category ID number.",
+        "default_value": ""
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "number",
+      "display_name": "Brand ID",
+      "uid": "brand_id",
+      "field_metadata": {
+        "description": "Limit products to a specific brand by entering the brand ID number.",
+        "default_value": ""
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "number",
+      "display_name": "Limit",
+      "uid": "limit",
+      "field_metadata": {
+        "description": "Maximum number of products to display in the slider.",
+        "default_value": 10
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false,
+      "min": 1
+    }
+  ],
+  "last_activity": {},
+  "maintain_revisions": true,
+  "description": "A product slider that automatically selects and displays products using smart sorting algorithms. Perfect for showing personalized or algorithm-driven product recommendations.",
+  "DEFAULT_ACL": [
+    { "k": "others", "v": { "read": false, "create": false } },
+    {
+      "k": "users.bltc64d5bf9c48ee13c",
+      "v": { "read": true, "sub_acl": { "read": true } }
+    }
+  ],
+  "SYS_ACL": { "roles": [] },
+  "options": {
+    "is_page": false,
+    "singleton": false,
+    "sub_title": [],
+    "title": "title"
+  },
+  "abilities": {
+    "get_one_object": true,
+    "get_all_objects": true,
+    "create_object": true,
+    "update_object": true,
+    "delete_object": true,
+    "delete_all_objects": true
+  }
+}

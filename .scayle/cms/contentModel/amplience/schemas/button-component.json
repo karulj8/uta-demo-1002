@@ -1,0 +1,5 @@
+{
+  "body": "./schemas/button-component-schema.json",
+  "schemaId": "https://scayle.com/schemas/button-component.json",
+  "validationLevel": "CONTENT_TYPE"
+}

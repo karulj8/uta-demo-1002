@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scayle.com/schemas/link-component.json",
+  "title": "Link",
+  "description": "A clickable link that can wrap around other content (like images or text). Use this to make entire sections clickable, not just buttons.",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "url_type": {
+      "title": "URL Type",
+      "description": "Whether the destination is an internal storefront path or an external URL.",
+      "type": "string",
+      "enum": [
+        "internal",
+        "external"
+      ],
+      "default": "internal"
+    },
+    "link": {
+      "title": "URL",
+      "description": "Destination when clicked. Use a storefront path for internal links (for example /content/about) or a full URL for external links.",
+      "type": "string"
+    },
+    "open_in_new_tab": {
+      "title": "Open in New Tab",
+      "description": "When enabled, opens the link in a new browser tab. Defaults to disabled for internal links.",
+      "type": "boolean",
+      "default": false
+    },
+    "content": {
+      "title": "Content",
+      "description": "Content that becomes clickable. Add a text or image block.",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1,
+      "ui:component": {
+        "params": {
+          "icons": {
+            "text": "typography",
+            "image": "photo-plus"
+          }
+        }
+      },
+      "items": {
+        "oneOf": [
+          {
+            "title": "Text",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "text",
+                "ui:component": "none"
+              },
+              "text": {
+                "title": "Text",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/text-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Image",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "image",
+                "ui:component": "none"
+              },
+              "image": {
+                "title": "Image",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/image-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "url_type",
+    "link",
+    "content"
+  ],
+  "propertyOrder": [
+    "url_type",
+    "link",
+    "open_in_new_tab",
+    "content"
+  ]
+}

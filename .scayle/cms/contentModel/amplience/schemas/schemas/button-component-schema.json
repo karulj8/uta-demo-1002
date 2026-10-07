@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scayle.com/schemas/button-component.json",
+  "title": "Button",
+  "description": "An interactive button that can link to other pages or trigger actions. Use buttons for call-to-action elements like \"Add to Cart\", \"Learn More\", or \"Contact Us\".",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "label": {
+      "title": "Text",
+      "description": "The text displayed on the button.",
+      "type": "string"
+    },
+    "link": {
+      "title": "URL",
+      "description": "The destination link when the button is clicked. Supports internal pages or external URLs.",
+      "type": "string"
+    },
+    "variant": {
+      "title": "Style",
+      "type": "string",
+      "enum": [
+        "primary",
+        "secondary",
+        "outline",
+        "accent",
+        "raw"
+      ],
+      "default": "primary",
+      "description": "Visual appearance of the button. Defaults to Primary."
+    }
+  },
+  "required": [
+    "label",
+    "link"
+  ],
+  "propertyOrder": [
+    "label",
+    "link",
+    "variant"
+  ]
+}

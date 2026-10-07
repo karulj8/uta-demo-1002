@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scayle.com/schemas/rich-text-component.json",
+  "title": "Rich Text",
+  "description": "A flexible text editor that supports formatting, links, lists, and headings. Use this for longer-form content that needs rich formatting options.",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "content": {
+      "title": "content",
+      "description": "Formatted text content with support for headings, bold, italic, lists, and links.",
+      "type": "string",
+      "format": "markdown"
+    }
+  },
+  "required": [
+    "content"
+  ],
+  "propertyOrder": [
+    "content"
+  ]
+}

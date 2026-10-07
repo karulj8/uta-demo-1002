@@ -1,0 +1,35 @@
+{
+  "contentTypeUri": "https://scayle.com/schemas/product-listing-page-component.json",
+  "status": "ACTIVE",
+  "settings": {
+    "label": "Product Listing Page",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://bigcontent.io/cms/icons/ca-types-article.png"
+      }
+    ],
+    "visualizations": [
+      {
+        "label": "Localhost",
+        "templatedUri": "https://localhost:3000/c/cms-preview-0?vse={{vse.domain}}&key={{delivery.key}}",
+        "default": false
+      },
+      {
+        "label": "Latest DE",
+        "templatedUri": "https://latest-amplience.sf.int.scayle.shop/de/c/cms-preview-0?vse={{vse.domain}}&key={{delivery.key}}",
+        "default": true
+      },
+      {
+        "label": "Latest EN",
+        "templatedUri": "https://latest-amplience.sf.int.scayle.shop/en/c/cms-preview-0?vse={{vse.domain}}&key={{delivery.key}}",
+        "default": false
+      }
+    ],
+    "cards": []
+  },
+  "repositories": [
+    "content",
+    "contentde"
+  ]
+}

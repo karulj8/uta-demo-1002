@@ -1,0 +1,263 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scayle.com/schemas/accordion-item-component.json",
+  "title": "AccordionItem",
+  "description": "A single expandable item within an accordion. Each item has a title that users click to reveal or hide the content inside.",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "title": {
+      "title": "Title",
+      "description": "The clickable heading that users click to expand or collapse this accordion item.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "content": {
+      "title": "Content",
+      "description": "Content that appears when this accordion item is expanded. Hidden by default.",
+      "type": "array",
+      "ui:component": {
+        "params": {
+          "icons": {
+            "text": "typography",
+            "richText": "article",
+            "button": "link",
+            "link": "link",
+            "divider": "separator",
+            "image": "photo-plus",
+            "video": "video-plus",
+            "productSlider": "shopping-cart",
+            "smartSorting": "numbers",
+            "recentlyViewed": "clock-hour-11"
+          }
+        }
+      },
+      "items": {
+        "oneOf": [
+          {
+            "title": "Text",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "text",
+                "ui:component": "none"
+              },
+              "text": {
+                "title": "Text",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/text-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Rich Text",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "richText",
+                "ui:component": "none"
+              },
+              "richText": {
+                "title": "Rich Text",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/rich-text-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Button",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "button",
+                "ui:component": "none"
+              },
+              "button": {
+                "title": "Button",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/button-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Link",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "link",
+                "ui:component": "none"
+              },
+              "link": {
+                "title": "Link",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/link-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Divider",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "divider",
+                "ui:component": "none"
+              },
+              "divider": {
+                "title": "Divider",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/divider-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Image",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "image",
+                "ui:component": "none"
+              },
+              "image": {
+                "title": "Image",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/image-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Video",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "video",
+                "ui:component": "none"
+              },
+              "video": {
+                "title": "Video",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/video-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Product Slider",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "productSlider",
+                "ui:component": "none"
+              },
+              "productSlider": {
+                "title": "Product Slider",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/product-slider-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Smart Sorting Products",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "smartSorting",
+                "ui:component": "none"
+              },
+              "smartSorting": {
+                "title": "Smart Sorting",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/smart-sorting-products-slider-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Recently Viewed Products",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "recentlyViewed",
+                "ui:component": "none"
+              },
+              "recentlyViewed": {
+                "title": "Recently Viewed Products",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/recently-viewed-products-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "title"
+  ],
+  "propertyOrder": [
+    "title",
+    "content"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scayle.com/schemas/divider-component.json",
+  "title": "Divider",
+  "description": "A spacing element that creates visual separation between content sections. Use dividers to break up long pages and improve readability.",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "height": {
+      "title": "Height",
+      "type": "string",
+      "enum": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "default": "small",
+      "description": "Amount of vertical spacing. Defaults to Small."
+    },
+    "showLine": {
+      "title": "Show Line",
+      "description": "When enabled, displays a horizontal line. When disabled, creates only empty space.",
+      "type": "boolean"
+    }
+  },
+  "propertyOrder": [
+    "height",
+    "showLine"
+  ]
+}

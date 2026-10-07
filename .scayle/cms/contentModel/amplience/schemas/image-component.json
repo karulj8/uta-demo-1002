@@ -1,0 +1,5 @@
+{
+  "body": "./schemas/image-component-schema.json",
+  "schemaId": "https://scayle.com/schemas/image-component.json",
+  "validationLevel": "CONTENT_TYPE"
+}

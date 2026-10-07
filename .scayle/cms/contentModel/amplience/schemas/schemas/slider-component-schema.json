@@ -1,0 +1,330 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scayle.com/schemas/slider-component.json",
+  "title": "Slider",
+  "description": "A horizontal slider/carousel that displays multiple items one at a time. Users can swipe or use navigation arrows to browse through items.",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "content": {
+      "title": "Content",
+      "description": "Items to display in the slider. Each item appears as a separate slide.",
+      "type": "array",
+      "ui:component": {
+        "params": {
+          "icons": {
+            "text": "typography",
+            "richText": "article",
+            "button": "link",
+            "link": "link",
+            "divider": "separator",
+            "image": "photo-plus",
+            "video": "video-plus",
+            "productSlider": "shopping-cart",
+            "smartSorting": "numbers",
+            "accordion": "layout-list",
+            "grid": "columns-2",
+            "section": "section"
+          }
+        }
+      },
+      "items": {
+        "oneOf": [
+          {
+            "title": "Text",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "text",
+                "ui:component": "none"
+              },
+              "text": {
+                "title": "Text",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/text-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Rich Text",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "richText",
+                "ui:component": "none"
+              },
+              "richText": {
+                "title": "Rich Text",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/rich-text-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Button",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "button",
+                "ui:component": "none"
+              },
+              "button": {
+                "title": "Button",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/button-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Link",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "link",
+                "ui:component": "none"
+              },
+              "link": {
+                "title": "Link",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/link-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Divider",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "divider",
+                "ui:component": "none"
+              },
+              "divider": {
+                "title": "Divider",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/divider-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Image",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "image",
+                "ui:component": "none"
+              },
+              "image": {
+                "title": "Image",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/image-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Video",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "video",
+                "ui:component": "none"
+              },
+              "video": {
+                "title": "Video",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/video-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Product Slider",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "productSlider",
+                "ui:component": "none"
+              },
+              "productSlider": {
+                "title": "Product Slider",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/product-slider-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Smart Sorting Products",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "smartSorting",
+                "ui:component": "none"
+              },
+              "smartSorting": {
+                "title": "Smart Sorting",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/smart-sorting-products-slider-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Accordion",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "accordion",
+                "ui:component": "none"
+              },
+              "accordion": {
+                "title": "Accordion",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/accordion-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Grid",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "grid",
+                "ui:component": "none"
+              },
+              "grid": {
+                "title": "Grid",
+                "description": "Links an existing Grid content item.",
+                "allOf": [
+                  {
+                    "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+                  },
+                  {
+                    "properties": {
+                      "contentType": {
+                        "enum": [
+                          "https://scayle.com/schemas/grid-component.json"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Section",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "section",
+                "ui:component": "none"
+              },
+              "section": {
+                "title": "Section",
+                "description": "Links an existing Section content item.",
+                "allOf": [
+                  {
+                    "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+                  },
+                  {
+                    "properties": {
+                      "contentType": {
+                        "enum": [
+                          "https://scayle.com/schemas/section-component.json"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          }
+        ]
+      }
+    },
+    "show_navigation_arrows": {
+      "title": "Show Navigation Arrows",
+      "description": "When enabled, displays left and right arrow buttons for navigation. Defaults to enabled.",
+      "type": "boolean",
+      "default": true
+    },
+    "show_pagination_indicators": {
+      "title": "Show Pagination Indicators",
+      "description": "When enabled, displays dots at the bottom showing active slide. Defaults to enabled.",
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "propertyOrder": [
+    "content",
+    "show_navigation_arrows",
+    "show_pagination_indicators"
+  ]
+}

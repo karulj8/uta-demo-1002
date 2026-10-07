@@ -1,0 +1,69 @@
+{
+  "title": "Accordion Item",
+  "uid": "accordion_item-component",
+  "schema": [
+    {
+      "data_type": "text",
+      "display_name": "Title",
+      "field_metadata": {
+        "_default": true,
+        "description": "Title used to organize the content within the CMS.",
+        "version": 3
+      },
+      "mandatory": true,
+      "uid": "title",
+      "unique": true,
+      "multiple": false,
+      "non_localizable": false
+    },
+    {
+      "data_type": "text",
+      "display_name": "Display Title",
+      "uid": "display_title",
+      "field_metadata": {
+        "description": "Heading displayed above the accordion item.",
+        "default_value": "",
+        "version": 3
+      },
+      "format": "",
+      "error_messages": { "format": "" },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "reference",
+      "display_name": "Content",
+      "reference_to": [
+        "video-component",
+        "text-component",
+        "smart_sorting_products_slider-component",
+        "slider-component",
+        "richtext-component",
+        "link-component",
+        "image-component",
+        "grid-component",
+        "divider-component",
+        "button-component",
+        "accordion-component"
+      ],
+      "field_metadata": {
+        "ref_multiple": false,
+        "ref_multiple_content_types": true
+      },
+      "uid": "content",
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    }
+  ],
+  "description": "A single expandable item within an accordion. Each item has a title that users click to reveal or hide the content inside.",
+  "options": {
+    "is_page": false,
+    "singleton": false,
+    "sub_title": [],
+    "title": "title"
+  }
+}

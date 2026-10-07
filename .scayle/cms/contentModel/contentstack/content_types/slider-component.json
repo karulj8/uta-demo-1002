@@ -1,0 +1,82 @@
+{
+  "title": "Slider",
+  "uid": "slider-component",
+  "schema": [
+    {
+      "data_type": "text",
+      "display_name": "Title",
+      "field_metadata": {
+        "_default": true,
+        "description": "Title used to organize the content within the CMS.",
+        "version": 3
+      },
+      "mandatory": true,
+      "uid": "title",
+      "unique": true,
+      "multiple": false,
+      "non_localizable": false
+    },
+    {
+      "data_type": "boolean",
+      "display_name": "Show Navigation Arrows",
+      "uid": "show_navigation_arrows",
+      "field_metadata": {
+        "description": "When enabled, displays left and right arrow buttons for navigation. Defaults to enabled.",
+        "default_value": true
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "boolean",
+      "display_name": "Show Pagination Indicators",
+      "uid": "show_pagination_indicators",
+      "field_metadata": {
+        "description": "When enabled, displays dots at the bottom showing active slide. Defaults to enabled.",
+        "default_value": true
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "reference",
+      "display_name": "Content",
+      "reference_to": [
+        "video-component",
+        "text-component",
+        "smart_sorting_products_slider-component",
+        "slider-component",
+        "section-component",
+        "richtext-component",
+        "link-component",
+        "image-component",
+        "grid-component",
+        "divider-component",
+        "button-component",
+        "accordion-component"
+      ],
+      "field_metadata": {
+        "ref_multiple": true,
+        "ref_multiple_content_types": true,
+        "description": "Items to display in the slider. Each item appears as a separate slide.",
+        "default_value": null
+      },
+      "uid": "content",
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    }
+  ],
+  "description": "A horizontal slider/carousel that displays multiple items one at a time. Users can swipe or use navigation arrows to browse through items.",
+  "options": {
+    "is_page": false,
+    "singleton": false,
+    "sub_title": [],
+    "title": "title"
+  }
+}

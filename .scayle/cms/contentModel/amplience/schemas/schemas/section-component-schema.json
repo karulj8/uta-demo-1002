@@ -1,0 +1,427 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scayle.com/schemas/section-component.json",
+  "title": "Section",
+  "description": "A container component that groups related content together. Sections can have backgrounds, padding, and alignment options. Think of it as a \"box\" for organizing content.",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "content": {
+      "title": "Content",
+      "description": "All content inside this section. Add any combination of components.",
+      "type": "array",
+      "ui:component": {
+        "params": {
+          "icons": {
+            "text": "typography",
+            "richText": "article",
+            "button": "link",
+            "link": "link",
+            "divider": "separator",
+            "image": "photo-plus",
+            "video": "video-plus",
+            "productSlider": "shopping-cart",
+            "smartSorting": "numbers",
+            "accordion": "layout-list",
+            "grid": "columns-2",
+            "section": "section"
+          }
+        }
+      },
+      "items": {
+        "oneOf": [
+          {
+            "title": "Text",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "text",
+                "ui:component": "none"
+              },
+              "text": {
+                "title": "Text",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/text-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Rich Text",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "richText",
+                "ui:component": "none"
+              },
+              "richText": {
+                "title": "Rich Text",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/rich-text-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Button",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "button",
+                "ui:component": "none"
+              },
+              "button": {
+                "title": "Button",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/button-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Link",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "link",
+                "ui:component": "none"
+              },
+              "link": {
+                "title": "Link",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/link-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Divider",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "divider",
+                "ui:component": "none"
+              },
+              "divider": {
+                "title": "Divider",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/divider-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Image",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "image",
+                "ui:component": "none"
+              },
+              "image": {
+                "title": "Image",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/image-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Video",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "video",
+                "ui:component": "none"
+              },
+              "video": {
+                "title": "Video",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/video-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Product Slider",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "productSlider",
+                "ui:component": "none"
+              },
+              "productSlider": {
+                "title": "Product Slider",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/product-slider-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Smart Sorting Products",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "smartSorting",
+                "ui:component": "none"
+              },
+              "smartSorting": {
+                "title": "Smart Sorting",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/smart-sorting-products-slider-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Accordion",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "accordion",
+                "ui:component": "none"
+              },
+              "accordion": {
+                "title": "Accordion",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/accordion-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Grid",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "grid",
+                "ui:component": "none"
+              },
+              "grid": {
+                "title": "Grid",
+                "description": "Links an existing Grid content item.",
+                "allOf": [
+                  {
+                    "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+                  },
+                  {
+                    "properties": {
+                      "contentType": {
+                        "enum": [
+                          "https://scayle.com/schemas/grid-component.json"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Section",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "section",
+                "ui:component": "none"
+              },
+              "section": {
+                "title": "Section",
+                "description": "Links an existing Section content item.",
+                "allOf": [
+                  {
+                    "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+                  },
+                  {
+                    "properties": {
+                      "contentType": {
+                        "enum": [
+                          "https://scayle.com/schemas/section-component.json"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Slider",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "slider",
+                "ui:component": "none"
+              },
+              "slider": {
+                "title": "Slider",
+                "description": "Links an existing Slider content item.",
+                "allOf": [
+                  {
+                    "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+                  },
+                  {
+                    "properties": {
+                      "contentType": {
+                        "enum": [
+                          "https://scayle.com/schemas/slider-component.json"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          }
+        ]
+      }
+    },
+    "padding": {
+      "title": "Padding",
+      "type": "string",
+      "enum": [
+        "none",
+        "small",
+        "medium",
+        "large"
+      ],
+      "default": "none",
+      "description": "Amount of space inside the section around content. Defaults to None."
+    },
+    "background_color": {
+      "title": "Background Color",
+      "description": "Background color for the section using a hex color code. Leave empty for transparent.",
+      "type": "string",
+      "pattern": "^#(?:[0-9a-fA-F]{3}){1,2}$"
+    },
+    "background_image_desktop": {
+      "title": "Background Image - Desktop",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        }
+      ],
+      "description": "Background image for desktop. Appears behind all section content."
+    },
+    "background_image_mobile": {
+      "title": "Background Image - Mobile",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        }
+      ],
+      "description": "Background image for mobile. If not provided, desktop image is used."
+    },
+    "min_height_desktop": {
+      "title": "Min. Height - Desktop",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "description": "Minimum section height on desktop in pixels."
+    },
+    "min_height_mobile": {
+      "title": "Min. Height - Mobile",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "description": "Minimum section height on mobile in pixels. Uses desktop value if not provided."
+    },
+    "horizontal_content_alignment": {
+      "title": "Horizontal Content Alignment",
+      "type": "string",
+      "enum": [
+        "Left",
+        "Center",
+        "Right"
+      ],
+      "default": "Center",
+      "description": "Horizontal alignment of content within the section. Defaults to Center."
+    },
+    "vertical_content_alignment": {
+      "title": "Vertical Content Alignment",
+      "type": "string",
+      "enum": [
+        "Top",
+        "Middle",
+        "Bottom"
+      ],
+      "default": "Middle",
+      "description": "Vertical alignment of content within the section. Defaults to Middle."
+    }
+  },
+  "propertyOrder": [
+    "content",
+    "padding",
+    "background_color",
+    "background_image_desktop",
+    "background_image_mobile",
+    "min_height_desktop",
+    "min_height_mobile",
+    "horizontal_content_alignment",
+    "vertical_content_alignment"
+  ]
+}

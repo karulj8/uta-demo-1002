@@ -1,0 +1,73 @@
+{
+  "title": "Link",
+  "uid": "link-component",
+  "schema": [
+    {
+      "data_type": "text",
+      "display_name": "Title",
+      "field_metadata": {
+        "_default": true,
+        "description": "Title used to organize the content within the CMS.",
+        "version": 3
+      },
+      "mandatory": true,
+      "uid": "title",
+      "unique": true,
+      "multiple": false,
+      "non_localizable": false
+    },
+    {
+      "data_type": "text",
+      "display_name": "URL",
+      "uid": "url",
+      "field_metadata": {
+        "description": "Destination link when clicked. Supports internal pages or external URLs.",
+        "default_value": "",
+        "version": 3
+      },
+      "format": "^((ftp|http|https):\\/\\/|\\/)(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$",
+      "error_messages": {
+        "format": "The url must be a valid URL or relative Path"
+      },
+      "mandatory": true,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "boolean",
+      "display_name": "Open In New Tab",
+      "uid": "open_in_new_tab",
+      "field_metadata": {
+        "description": "Whether to open the link in a new browser tab or not.",
+        "default_value": true
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "reference",
+      "display_name": "Content",
+      "reference_to": ["text-component", "image-component"],
+      "field_metadata": {
+        "ref_multiple": false,
+        "ref_multiple_content_types": true,
+        "description": "Content that becomes clickable (images, text, or other components)."
+      },
+      "uid": "content",
+      "mandatory": true,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    }
+  ],
+  "description": "A clickable link that can wrap around other content (like images or text). Use this to make entire sections clickable, not just buttons.",
+  "options": {
+    "is_page": false,
+    "singleton": false,
+    "sub_title": [],
+    "title": "title"
+  }
+}

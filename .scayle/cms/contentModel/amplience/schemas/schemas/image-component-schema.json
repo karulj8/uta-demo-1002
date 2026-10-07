@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scayle.com/schemas/image-component.json",
+  "title": "Image",
+  "description": "Displays an image with responsive behavior, showing different images on mobile and desktop if needed. Images automatically optimize for performance.",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "alt_text": {
+      "title": "Alt Text",
+      "description": "Text description of the image for accessibility and SEO.",
+      "type": "string"
+    },
+    "image_desktop": {
+      "title": "Image - Desktop",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        }
+      ],
+      "description": "Image displayed on desktop and tablet. Used on mobile if no mobile image is provided."
+    },
+    "image_mobile": {
+      "title": "Image - Mobile",
+      "description": "Image displayed on mobile devices. If not provided, desktop image is used.",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        }
+      ]
+    },
+    "aspect_ratio_desktop": {
+      "title": "Aspect Ratio - Desktop",
+      "type": "string",
+      "enum": [
+        "16:9",
+        "1:1",
+        "4:3",
+        "3:4",
+        "original"
+      ],
+      "default": "original",
+      "description": "Image proportions on desktop. Defaults to Original."
+    },
+    "aspect_ratio_mobile": {
+      "title": "Aspect Ratio - Mobile",
+      "type": "string",
+      "enum": [
+        "16:9",
+        "1:1",
+        "4:3",
+        "3:4",
+        "original"
+      ],
+      "default": "original",
+      "description": "Image proportions on mobile. Defaults to Original."
+    }
+  },
+  "required": [
+    "image_desktop",
+    "alt_text"
+  ],
+  "propertyOrder": [
+    "alt_text",
+    "image_desktop",
+    "image_mobile",
+    "aspect_ratio_desktop",
+    "aspect_ratio_mobile"
+  ]
+}

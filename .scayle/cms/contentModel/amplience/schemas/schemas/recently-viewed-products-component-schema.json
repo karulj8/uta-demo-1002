@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scayle.com/schemas/recently-viewed-products-component.json",
+  "title": "Recently Viewed Products",
+  "description": "Automatically displays products that the current user has recently viewed. Great for personalization and encouraging return visits to products.",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "padding": {
+      "title": "Padding",
+      "description": "Amount of space around the component. Defaults to None.",
+      "type": "string",
+      "enum": [
+        "small",
+        "medium",
+        "large",
+        "none"
+      ],
+      "default": "none"
+    }
+  },
+  "propertyOrder": [
+    "padding"
+  ]
+}

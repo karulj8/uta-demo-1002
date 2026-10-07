@@ -1,0 +1,8 @@
+/.nuxt
+/.output
+/.vercel
+pnpm-lock.yaml
+modules/cms/providers/**/types/gen/**/*
+!modules/cms/providers/amplience/types/gen/**
+.storyblok/**/*
+.scayle/cms/**/*

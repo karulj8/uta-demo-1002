@@ -1,0 +1,5 @@
+{
+  "body": "./schemas/rich-text-component-schema.json",
+  "schemaId": "https://scayle.com/schemas/rich-text-component.json",
+  "validationLevel": "CONTENT_TYPE"
+}

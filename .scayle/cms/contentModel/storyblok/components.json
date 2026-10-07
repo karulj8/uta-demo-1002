@@ -1,0 +1,1569 @@
+[
+  {
+    "name": "AccordionComponent",
+    "display_name": "Accordion",
+    "description": "A collapsible container that displays multiple expandable items, perfect for FAQs, product information, or any content that needs to be organized in a space-efficient way.",
+    "created_at": "2025-08-07T14:31:58.771Z",
+    "updated_at": "2025-12-02T10:42:06.800Z",
+    "id": 77363276892719,
+    "schema": {
+      "title": {
+        "type": "text",
+        "pos": 0,
+        "id": "0TebFRHyTPK3o4Gc4OB4_g",
+        "description": "Optional heading displayed above all accordion items.",
+        "tooltip": true
+      },
+      "content": {
+        "type": "bloks",
+        "pos": 1,
+        "restrict_type": "",
+        "restrict_components": true,
+        "component_whitelist": [
+          "AccordionItemComponent"
+        ],
+        "id": "U24-CESTQiiB0AsLGD2_PA",
+        "required": true,
+        "description": "List of accordion items that users can expand or collapse.",
+        "tooltip": true
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Accordion",
+    "component_group_uuid": "ef9dcdb3-7565-4858-b458-4d8df1c7f47d",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "AccordionItemComponent",
+    "display_name": "Accordion Item",
+    "description": "A single expandable item within an accordion. Each item has a title that users click to reveal or hide the content inside.",
+    "created_at": "2025-08-07T14:30:35.064Z",
+    "updated_at": "2025-12-02T10:42:21.146Z",
+    "id": 77362934032942,
+    "schema": {
+      "title": {
+        "type": "text",
+        "pos": 0,
+        "required": true,
+        "id": "NFzlowYySm-DwY3z8mGCyw",
+        "translatable": false
+      },
+      "content": {
+        "type": "bloks",
+        "pos": 1,
+        "id": "VvwOnKkDQVW47qqclauNTg",
+        "restrict_type": "",
+        "restrict_components": true,
+        "component_whitelist": [
+          "AccordionComponent",
+          "ButtonComponent",
+          "DividerComponent",
+          "GridComponent",
+          "ImageComponent",
+          "LinkComponent",
+          "RichTextComponent",
+          "SectionComponent",
+          "SliderComponent",
+          "TextComponent",
+          "VideoComponent",
+          "ProductSliderComponent",
+          "SmartSortingProductsSliderComponent"
+        ]
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Accordion Item",
+    "component_group_uuid": "ef9dcdb3-7565-4858-b458-4d8df1c7f47d",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "ButtonComponent",
+    "display_name": "Button",
+    "description": "An interactive button that can link to other pages or trigger actions. Use buttons for call-to-action elements like \"Add to Cart\", \"Learn More\", or \"Contact Us\".",
+    "created_at": "2025-08-07T14:26:16.717Z",
+    "updated_at": "2025-12-02T10:45:19.817Z",
+    "id": 77361875839525,
+    "schema": {
+      "text": {
+        "type": "text",
+        "pos": 0,
+        "id": "1nkRFvPaR5iD_NaRQiVLDA",
+        "required": true,
+        "translatable": false,
+        "display_name": "Text",
+        "description": "The text displayed on the button.",
+        "tooltip": true
+      },
+      "url": {
+        "type": "multilink",
+        "pos": 1,
+        "id": "mHGRK2tQSFSePpo0-L9lQw",
+        "allow_target_blank": true,
+        "show_anchor": true,
+        "required": true,
+        "description": "The destination link when the button is clicked. Supports internal pages or external URLs.",
+        "display_name": "URL",
+        "translatable": false,
+        "tooltip": true
+      },
+      "style": {
+        "type": "option",
+        "pos": 2,
+        "use_uuid": true,
+        "options": [
+          {
+            "_uid": "87c66bca-f567-4cd9-903c-cee9ee75d23a",
+            "name": "Primary",
+            "value": "primary"
+          },
+          {
+            "_uid": "21358f06-d65a-4bd1-89fe-7d5ac15327c8",
+            "value": "secondary",
+            "name": "Secondary"
+          },
+          {
+            "_uid": "f7f8f314-c964-4a9a-b4ec-8777c2da475c",
+            "value": "outline",
+            "name": "Outline"
+          },
+          {
+            "_uid": "67f4d756-821d-4e26-8f7a-0b95c5dc2c55",
+            "value": "accent",
+            "name": "Accent"
+          }
+        ],
+        "default_value": "primary",
+        "id": "sa5GmhUfSh-A6Sd5JxwQDw",
+        "required": false,
+        "display_name": "Style",
+        "description": "Visual appearance of the button. Defaults to Primary.",
+        "tooltip": true
+      }
+    },
+    "image": null,
+    "preview_field": "text",
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Button",
+    "component_group_uuid": "ef9dcdb3-7565-4858-b458-4d8df1c7f47d",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "DividerComponent",
+    "display_name": "Divider",
+    "description": "A spacing element that creates visual separation between content sections. Use dividers to break up long pages and improve readability.",
+    "created_at": "2025-08-07T14:08:30.958Z",
+    "updated_at": "2025-12-02T10:45:42.921Z",
+    "id": 77357510490585,
+    "schema": {
+      "height": {
+        "type": "option",
+        "pos": 0,
+        "use_uuid": true,
+        "options": [
+          {
+            "_uid": "0262cdc4-adec-4a9c-b59c-bfc7b6288635",
+            "name": "Small",
+            "value": "small"
+          },
+          {
+            "_uid": "452025c9-90e8-48d8-ac71-90b8178623aa",
+            "value": "medium",
+            "name": "Medium"
+          },
+          {
+            "_uid": "fb9e0a90-37ef-4d39-8c57-24ffce944759",
+            "value": "large",
+            "name": "Large"
+          }
+        ],
+        "default_value": "small",
+        "id": "DtarZwgMTPu_pnttHyKn-w",
+        "required": true,
+        "description": "Amount of vertical spacing. Defaults to Small.",
+        "tooltip": true
+      },
+      "showLine": {
+        "type": "boolean",
+        "pos": 1,
+        "inline_label": true,
+        "id": "srgHzDXjR26YBZriIO1YwQ",
+        "description": "When enabled, displays a horizontal line. When disabled, creates only empty space.",
+        "tooltip": true
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Divider",
+    "component_group_uuid": "f10ab040-8c51-44b7-93b7-2bc8c0e197ca",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "GridComponent",
+    "display_name": "Grid",
+    "description": "A flexible layout tool that arranges content in columns. Perfect for creating side-by-side layouts, product grids, or any organized content arrangement.",
+    "created_at": "2025-08-07T14:00:14.510Z",
+    "updated_at": "2025-12-02T10:48:50.553Z",
+    "id": 77355477039560,
+    "schema": {
+      "numberOfColumnsDesktop": {
+        "type": "number",
+        "pos": 0,
+        "id": "P8Ze7QkeR8CUqaArCu7acw",
+        "default_value": "2",
+        "min_value": 2,
+        "max_value": 6,
+        "decimals": 0,
+        "steps": 1,
+        "required": true,
+        "description": "Number of columns displayed on desktop and tablet screens.",
+        "tooltip": true
+      },
+      "numberOfColumnsMobile": {
+        "type": "number",
+        "pos": 1,
+        "id": "iFAApzvbSMCZRhdu7TZSYw",
+        "default_value": "1",
+        "min_value": 1,
+        "max_value": 3,
+        "steps": 1,
+        "decimals": 0,
+        "required": true,
+        "description": "Number of columns displayed on mobile devices.",
+        "tooltip": true
+      },
+      "gapColumnDesktop": {
+        "type": "option",
+        "pos": 2,
+        "use_uuid": true,
+        "id": "LICfggrvQuaUOHJuKud_gw",
+        "options": [
+          {
+            "_uid": "afe196ef-776e-4cf5-b969-fea697b2284d",
+            "name": "Small",
+            "value": "small"
+          },
+          {
+            "_uid": "74f4c6f0-5d1e-43ec-8034-688db721fad3",
+            "value": "medium",
+            "name": "Medium"
+          },
+          {
+            "_uid": "ebb2f9d4-cefb-41d1-82ec-c4b3b73aa59a",
+            "value": "large",
+            "name": "Large"
+          },
+          {
+            "_uid": "873cf23c-d27c-48db-a3e3-228c004ce8b2",
+            "value": "none",
+            "name": "None"
+          }
+        ],
+        "default_value": "none",
+        "description": "Horizontal spacing between columns on desktop. Defaults to None.",
+        "tooltip": true
+      },
+      "gapRowDesktop": {
+        "type": "option",
+        "pos": 3,
+        "use_uuid": true,
+        "id": "5D-IjJXSS_OGKLVqujStgA",
+        "options": [
+          {
+            "_uid": "2f987e40-23eb-4a72-8246-2858fc9489c4",
+            "name": "Small",
+            "value": "small"
+          },
+          {
+            "_uid": "6220ec3f-febd-4eec-a64d-4517dc28dc57",
+            "value": "medium",
+            "name": "Medium"
+          },
+          {
+            "_uid": "42d1eaba-7979-4fee-85cc-7e7fb3b76936",
+            "value": "large",
+            "name": "Large"
+          },
+          {
+            "_uid": "c24f950f-614e-45e9-a094-65630edcf361",
+            "value": "none",
+            "name": "None"
+          }
+        ],
+        "default_value": "none",
+        "description": "Vertical spacing between rows on desktop. Defaults to None.",
+        "tooltip": true
+      },
+      "gapColumnMobile": {
+        "type": "option",
+        "pos": 4,
+        "use_uuid": true,
+        "id": "LfORSpBpTN27lKHiOGkLaw",
+        "options": [
+          {
+            "_uid": "93f5e2f8-6c75-4fa7-b2ee-341b8e839f27",
+            "name": "Small",
+            "value": "small"
+          },
+          {
+            "_uid": "f686d9fe-15c9-40ef-beb7-07a47c358234",
+            "value": "medium",
+            "name": "Medium"
+          },
+          {
+            "_uid": "f74a615d-b8a8-4eeb-b6a1-c0f27fe8bd66",
+            "value": "large",
+            "name": "Large"
+          },
+          {
+            "_uid": "3b0d7093-daf3-4bcd-acb4-8360aa6c55ec",
+            "value": "none",
+            "name": "None"
+          }
+        ],
+        "default_value": "none",
+        "description": "Horizontal spacing between columns on mobile. Defaults to None.",
+        "tooltip": true
+      },
+      "gapRowMobile": {
+        "type": "option",
+        "pos": 5,
+        "use_uuid": true,
+        "id": "_SCb0SknRqmaB_D5xqTPxg",
+        "options": [
+          {
+            "_uid": "9fb3c2d1-4a1e-4fd4-a5b9-00a3ed60dd5e",
+            "name": "Small",
+            "value": "small"
+          },
+          {
+            "_uid": "2ef84b01-ddc9-4159-86b6-68d2d9efe464",
+            "value": "medium",
+            "name": "Medium"
+          },
+          {
+            "_uid": "8d286136-9479-4f88-b0e5-79b54f9438d7",
+            "value": "large",
+            "name": "Large"
+          },
+          {
+            "_uid": "fa1fed22-38f3-4d37-9165-629768720287",
+            "value": "none",
+            "name": "None"
+          }
+        ],
+        "default_value": "none",
+        "description": "Vertical spacing between rows on mobile. Defaults to None.",
+        "tooltip": true
+      },
+      "verticalContentAlignment": {
+        "type": "option",
+        "pos": 6,
+        "use_uuid": true,
+        "required": false,
+        "options": [
+          {
+            "_uid": "902144c4-761c-41fc-9897-d30fe9e87fae",
+            "name": "Top",
+            "value": "Top"
+          },
+          {
+            "_uid": "05403a6e-9d13-40cb-a67f-ecb07ba1c227",
+            "value": "Middle",
+            "name": "Middle"
+          },
+          {
+            "_uid": "01b061f3-2521-455a-8fde-64127d590a60",
+            "value": "Bottom",
+            "name": "Bottom"
+          }
+        ],
+        "default_value": "Middle",
+        "id": "jORnVl9gQxKlMOHe5cAV5Q",
+        "description": "Vertical alignment of content within grid cells. Defaults to Middle.",
+        "tooltip": true
+      },
+      "horizontalContentAlignment": {
+        "type": "option",
+        "pos": 7,
+        "use_uuid": true,
+        "id": "jjbvmjVORy-k-JR-BsAm5Q",
+        "required": false,
+        "options": [
+          {
+            "_uid": "dabf4ee9-dade-4244-b8ff-424f303ff1f7",
+            "name": "Left",
+            "value": "Left"
+          },
+          {
+            "_uid": "c9d5ebdb-35a3-461d-ae4b-3f62b4da455b",
+            "value": "Center",
+            "name": "Center"
+          },
+          {
+            "_uid": "611d8dde-0871-47c7-ac09-cc79034694a2",
+            "value": "Right",
+            "name": "Right"
+          }
+        ],
+        "default_value": "Center",
+        "description": "Horizontal alignment of content within grid cells. Defaults to Center.",
+        "tooltip": true
+      },
+      "columnContent": {
+        "type": "bloks",
+        "pos": 8,
+        "id": "BUuf86YDSjSj--LHfC2-SQ",
+        "restrict_type": "",
+        "restrict_components": true,
+        "component_whitelist": [
+          "AccordionComponent",
+          "ButtonComponent",
+          "DividerComponent",
+          "GridComponent",
+          "ImageComponent",
+          "LinkComponent",
+          "RichTextComponent",
+          "SectionComponent",
+          "SliderComponent",
+          "TextComponent",
+          "VideoComponent",
+          "ProductSliderComponent",
+          "SmartSortingProductsSliderComponent"
+        ],
+        "description": "Content items to display in the grid. Each item appears in its own grid cell.",
+        "tooltip": true
+      }
+    },
+    "image": null,
+    "preview_field": "columnContent",
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Grid",
+    "component_group_uuid": "f10ab040-8c51-44b7-93b7-2bc8c0e197ca",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "ImageComponent",
+    "display_name": "Image",
+    "description": "Displays an image with responsive behavior, showing different images on mobile and desktop if needed. Images automatically optimize for performance.",
+    "created_at": "2025-08-07T12:25:08.993Z",
+    "updated_at": "2025-12-02T10:50:32.690Z",
+    "id": 77332107262015,
+    "schema": {
+      "imageDesktop": {
+        "type": "asset",
+        "pos": 0,
+        "translatable": false,
+        "description": "Image displayed on desktop and tablet. Used on mobile if no mobile image is provided.",
+        "filetypes": [
+          "images"
+        ],
+        "id": "OcPxoRCUQmqK4PJgRwoAIw",
+        "display_name": "Image - Desktop",
+        "tooltip": true
+      },
+      "imageMobile": {
+        "type": "asset",
+        "pos": 1,
+        "description": "Image displayed on mobile devices. If not provided, desktop image is used.",
+        "filetypes": [
+          "images"
+        ],
+        "id": "RMeK0kzYT5WU4ksMZhIF2Q",
+        "display_name": "Image - Mobile",
+        "tooltip": true
+      },
+      "altText": {
+        "type": "text",
+        "pos": 2,
+        "required": true,
+        "id": "NHAb4gN7QR-AW9xvOuaoWA",
+        "translatable": false,
+        "description": "Text description of the image for accessibility and SEO.",
+        "tooltip": true
+      },
+      "aspectRatioDesktop": {
+        "type": "option",
+        "pos": 3,
+        "use_uuid": true,
+        "options": [
+          {
+            "_uid": "14297f4c-d720-4f6b-ad93-950f9bd0fd54",
+            "name": "Original",
+            "value": "original"
+          },
+          {
+            "_uid": "4ff484db-5cfc-43bd-b036-8d7772138f2a",
+            "value": "1:1",
+            "name": "Square"
+          },
+          {
+            "_uid": "9d5891bf-48b3-4219-87a7-f3904584e90f",
+            "value": "16:9",
+            "name": "Landscape (16:9)"
+          },
+          {
+            "_uid": "ee5148cd-cbcc-4e67-8f90-73471fae0857",
+            "value": "4:3",
+            "name": "Landscape (4:3)"
+          }
+        ],
+        "default_value": "original",
+        "id": "FPFTg9vfRLqS4AwMvBSRqA",
+        "datasource_slug": "image-aspect-ratio",
+        "required": false,
+        "display_name": "Aspect Ratio - Desktop",
+        "description": "Image proportions on desktop. Defaults to Original.",
+        "tooltip": true
+      },
+      "aspectRatioMobile": {
+        "type": "option",
+        "pos": 4,
+        "use_uuid": true,
+        "id": "L8pUEl-jTduq_9mXqTwL-g",
+        "datasource_slug": "image-aspect-ratio",
+        "default_value": "original",
+        "options": [
+          {
+            "_uid": "6d23f4f2-57c9-4a41-b56b-7d2bc200ea89",
+            "name": "Original",
+            "value": "original"
+          },
+          {
+            "_uid": "23dd3816-90a4-4b51-88d4-032d5a8cc20a",
+            "value": "1:1",
+            "name": "Square"
+          },
+          {
+            "_uid": "3291648b-7a0c-4144-92d9-624cad3ce01a",
+            "value": "16:9",
+            "name": "Landscape (16:9)"
+          },
+          {
+            "_uid": "140d144f-0d37-49c0-b1de-1941452795e8",
+            "value": "4:3",
+            "name": "Landscape (4:3)"
+          }
+        ],
+        "required": false,
+        "display_name": "Aspect Ratio - Mobile",
+        "description": "Image proportions on mobile. Defaults to Original.",
+        "tooltip": true
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": "<div>\n    {{@image(it.imageDesktop.filename)/}}\n</div>",
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Image",
+    "component_group_uuid": "ef9dcdb3-7565-4858-b458-4d8df1c7f47d",
+    "color": null,
+    "icon": "block-image",
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "LinkComponent",
+    "display_name": "Link",
+    "description": "A clickable link that can wrap around other content (like images or text). Use this to make entire sections clickable, not just buttons.",
+    "created_at": "2025-08-07T12:21:30.686Z",
+    "updated_at": "2025-12-02T10:51:04.763Z",
+    "id": 77331213055948,
+    "schema": {
+      "url": {
+        "type": "multilink",
+        "pos": 0,
+        "required": true,
+        "allow_target_blank": true,
+        "id": "SiiycULTTzCj7x696HS7XQ",
+        "restrict_content_types": false,
+        "component_whitelist": [],
+        "allow_custom_attributes": false,
+        "force_link_scope": false,
+        "email_link_type": false,
+        "asset_link_type": false,
+        "show_anchor": true,
+        "description": "Destination link when clicked. Supports internal pages or external URLs.",
+        "display_name": "URL",
+        "translatable": false,
+        "tooltip": true
+      },
+      "content": {
+        "type": "bloks",
+        "pos": 2,
+        "restrict_type": "",
+        "restrict_components": true,
+        "component_whitelist": [
+          "ImageComponent",
+          "TextComponent"
+        ],
+        "id": "IAwYOgqBRLe2di6kseJxng",
+        "minimum": 1,
+        "maximum": 1,
+        "description": "Content that becomes clickable (images, text, or other components).",
+        "tooltip": true
+      }
+    },
+    "image": null,
+    "preview_field": "content",
+    "is_root": false,
+    "preview_tmpl": "{{@if(it.content[0].component === 'Text')}}\n<div>\n  {{it.content[0].content}}\n</div>\n{{#else}}\n<div>\n {{@image(it.content[0].imageDesktop.filename)/}}\n</div>\n{{/if}}",
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Link",
+    "component_group_uuid": "ef9dcdb3-7565-4858-b458-4d8df1c7f47d",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "PageComponent",
+    "display_name": "Page",
+    "description": "The main page component that contains all page content and SEO settings. This is typically the root component for any page.",
+    "created_at": "2025-07-28T13:30:21.860Z",
+    "updated_at": "2025-12-02T10:52:32.349Z",
+    "id": 73809190348856,
+    "schema": {
+      "metaTitle": {
+        "type": "text",
+        "pos": 0,
+        "translatable": false,
+        "id": "6b-ijhbiTcqYJRb6wMuG-g",
+        "description": "Page title for browser tabs and search results. Keep under 60 characters for SEO.",
+        "tooltip": true
+      },
+      "metaDescription": {
+        "type": "text",
+        "pos": 1,
+        "translatable": false,
+        "id": "u1J2_v9VQOKg_NSKbOR6nQ",
+        "description": "Brief page description for search results. Keep under 160 characters.",
+        "tooltip": true
+      },
+      "robots": {
+        "type": "option",
+        "pos": 2,
+        "use_uuid": true,
+        "options": [
+          {
+            "_uid": "d85f8a77-c0ca-45c4-a38f-4031c890a74e",
+            "value": "index, follow",
+            "name": "Index Page and follow Links"
+          },
+          {
+            "_uid": "fb19a308-d752-4f3a-a8a8-f1d7e727380d",
+            "name": "Hide Page, and dont Follow Links",
+            "value": "noindex, nofollow"
+          },
+          {
+            "_uid": "15de682f-f182-44f6-ad20-07e6cf5a8042",
+            "value": "index, nofollow",
+            "name": "ndex Page, but Ignore Links"
+          },
+          {
+            "_uid": "ac44d257-6afd-47c1-ab2c-a620558fdf2e",
+            "value": "noindex, follow",
+            "name": "Hide Page, but Follow Link"
+          }
+        ],
+        "default_value": "",
+        "description": "Controls how search engines index this page. Defaults to index/follow.",
+        "id": "_gTkz3VYTOy5WpyUECrU7Q",
+        "tooltip": true
+      },
+      "content": {
+        "type": "bloks",
+        "pos": 3,
+        "restrict_type": "",
+        "restrict_components": true,
+        "component_group_whitelist": [],
+        "id": "Hxhod5o0Tgy1PgtWk76N2A",
+        "component_whitelist": [
+          "AccordionComponent",
+          "ButtonComponent",
+          "DividerComponent",
+          "GridComponent",
+          "ImageComponent",
+          "LinkComponent",
+          "ProductSliderComponent",
+          "RecentlyViewedProductsComponent",
+          "RichTextComponent",
+          "SectionComponent",
+          "SliderComponent",
+          "TextComponent",
+          "VideoComponent",
+          "SmartSortingProductsSliderComponent"
+        ],
+        "description": "CMS page content. Add sections, images, text, and other components here.",
+        "tooltip": true
+      },
+      "tab-6028ac4b-8ffb-49b9-8793-3962cb077932": {
+        "display_name": "SEO",
+        "keys": [
+          "metaTitle",
+          "metaDescription",
+          "robots"
+        ],
+        "pos": 4,
+        "type": "tab",
+        "id": "YCisS4_7SbmHkzliywd5Mg"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": true,
+    "preview_tmpl": null,
+    "is_nestable": false,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Page",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "ProductListingPageComponent",
+    "display_name": null,
+    "description": "A specialized page component for product category/listing pages. It includes both teaser content (shown at the top) and SEO content (shown at the bottom).",
+    "created_at": "2025-08-27T13:30:10.900Z",
+    "updated_at": "2025-12-02T10:52:57.657Z",
+    "id": 84425977452687,
+    "schema": {
+      "teaserContent": {
+        "type": "bloks",
+        "pos": 0,
+        "id": "CFVLAZh6R4Guc2B8yetNEA",
+        "restrict_type": "",
+        "restrict_components": true,
+        "component_whitelist": [
+          "ImageComponent",
+          "SectionComponent",
+          "SliderComponent",
+          "TextComponent"
+        ],
+        "display_name": "Teaser Content",
+        "description": "Content displayed at the top of the product listing page, above the product grid.",
+        "tooltip": true
+      },
+      "seoContent": {
+        "type": "bloks",
+        "pos": 1,
+        "restrict_type": "",
+        "restrict_components": true,
+        "component_whitelist": [
+          "AccordionComponent",
+          "AccordionItemComponent",
+          "ButtonComponent",
+          "DividerComponent",
+          "GridComponent",
+          "ImageComponent",
+          "LinkComponent",
+          "ProductSliderComponent",
+          "RecentlyViewedProductsComponent",
+          "RichTextComponent",
+          "SectionComponent",
+          "SliderComponent",
+          "TextComponent",
+          "VideoComponent"
+        ],
+        "id": "YZLhwduoRSCGV59LpaarPw",
+        "description": "Content displayed at the bottom of the product listing page, after the product grid. Useful for SEO.",
+        "tooltip": true
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": true,
+    "preview_tmpl": null,
+    "is_nestable": false,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "ProductListingPageComponent",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "ProductSliderComponent",
+    "display_name": "Product Slider",
+    "description": "Displays a horizontal slider of products. Perfect for showcasing featured products, related items, or curated collections.",
+    "created_at": "2025-09-23T09:58:53.656Z",
+    "updated_at": "2025-12-02T10:53:43.697Z",
+    "id": 93929200260896,
+    "schema": {
+      "title": {
+        "type": "text",
+        "pos": 0,
+        "id": "ORej_9A7T9SGZngMnSMf7g",
+        "description": "Heading displayed above the product slider.",
+        "tooltip": true
+      },
+      "products": {
+        "type": "custom",
+        "pos": 1,
+        "field_type": "scayle-storyblok",
+        "options": [
+          {
+            "name": "endpoint",
+            "value": "https://next-qa-storyblok.addon.scayle.cloud/api/1918",
+            "_uid": "1e75a62e-1562-4be9-80d7-928ab9da21db"
+          },
+          {
+            "name": "pluginType",
+            "value": "product",
+            "_uid": "aa976054-7d40-4b65-8b29-4ffc1029e5f9"
+          }
+        ],
+        "id": "W1lx6hqFRT2O2oW58YYz-Q",
+        "description": "List of products to display in the slider. Products appear in the selected order. Needs the SCAYLE Storyblok Field plugin to be installed.",
+        "tooltip": true
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Product Slider",
+    "component_group_uuid": "ef9dcdb3-7565-4858-b458-4d8df1c7f47d",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "RecentlyViewedProductsComponent",
+    "display_name": "Recently Viewed Products",
+    "description": "Automatically displays products that the current user has recently viewed. Great for personalization and encouraging return visits to products.",
+    "created_at": "2025-09-16T09:00:42.727Z",
+    "updated_at": "2025-12-02T10:54:01.693Z",
+    "id": 91437640616499,
+    "schema": {
+      "padding": {
+        "type": "option",
+        "pos": 0,
+        "use_uuid": true,
+        "options": [
+          {
+            "_uid": "9840d285-45e0-4b23-896c-43890c3a83ec",
+            "name": "Small",
+            "value": "small"
+          },
+          {
+            "_uid": "1a53f508-a689-4800-a825-f87f780fb426",
+            "value": "medium",
+            "name": "Medium"
+          },
+          {
+            "_uid": "f8214756-b239-4163-8bed-8187f0657674",
+            "value": "large",
+            "name": "Large"
+          },
+          {
+            "_uid": "8cb72069-43ab-4aa6-a08b-120ba1fb4d54",
+            "value": "none",
+            "name": "None"
+          }
+        ],
+        "default_value": "none",
+        "id": "JIgutVncQLWTRAHdHoB-Sw",
+        "description": "Amount of space around the component. Defaults to None.",
+        "tooltip": true
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Recently Viewed Products",
+    "component_group_uuid": "ef9dcdb3-7565-4858-b458-4d8df1c7f47d",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "RichTextComponent",
+    "display_name": "RichText",
+    "description": "A flexible text editor that supports formatting, links, lists, and headings. Use this for longer-form content that needs rich formatting options.",
+    "created_at": "2025-08-07T14:10:49.775Z",
+    "updated_at": "2025-12-02T10:54:22.741Z",
+    "id": 77358079085036,
+    "schema": {
+      "content": {
+        "type": "richtext",
+        "pos": 0,
+        "required": true,
+        "id": "23aqJq4ISFS8Bw3XaNrdPw",
+        "customize_toolbar": true,
+        "toolbar": [
+          "h1",
+          "emoji",
+          "h2",
+          "h3",
+          "italic",
+          "link",
+          "anchor",
+          "olist",
+          "paragraph",
+          "underline",
+          "undo",
+          "redo",
+          "paste-action",
+          "unset",
+          "copy",
+          "cut",
+          "list",
+          "bold"
+        ],
+        "allow_target_blank": true,
+        "translatable": false,
+        "description": "Formatted text content with support for headings, bold, italic, lists, and links.",
+        "tooltip": true
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "RichText",
+    "component_group_uuid": "ef9dcdb3-7565-4858-b458-4d8df1c7f47d",
+    "color": null,
+    "icon": "block-text-img-r",
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "SectionComponent",
+    "display_name": "Section",
+    "description": "A container component that groups related content together. Sections can have backgrounds, padding, and alignment options. Think of it as a \"box\" for organizing content.",
+    "created_at": "2025-08-07T13:47:40.395Z",
+    "updated_at": "2025-12-02T10:55:38.536Z",
+    "id": 77352388184496,
+    "schema": {
+      "backgroundColor": {
+        "type": "text",
+        "pos": 0,
+        "regex": "^#(?:[0-9a-fA-F]{3}){1,2}$",
+        "max_length": 7,
+        "id": "B9_g9azwSJ2y5tOKW3GVPg",
+        "description": "Background color for the section using a hex color code. Leave empty for transparent.",
+        "tooltip": true
+      },
+      "backgroundImageDesktop": {
+        "type": "asset",
+        "pos": 1,
+        "filetypes": [
+          "images"
+        ],
+        "id": "nl_im0xoTh268rt27QdEqQ",
+        "display_name": "Background Image - Desktop",
+        "description": "Background image for desktop. Appears behind all section content.",
+        "tooltip": true
+      },
+      "backgroundImageMobile": {
+        "type": "asset",
+        "pos": 2,
+        "id": "LMRLAWbaR221yXDeofLAHg",
+        "display_name": "Background Image - Mobile",
+        "description": "Background image for mobile. If not provided, desktop image is used.",
+        "tooltip": true
+      },
+      "padding": {
+        "type": "option",
+        "pos": 3,
+        "use_uuid": true,
+        "options": [
+          {
+            "_uid": "fd5aef47-376e-4c70-8a34-b0aba3291ee3",
+            "name": "Small",
+            "value": "small"
+          },
+          {
+            "_uid": "3a29c57f-45ee-4fb4-9058-21e02ff1ae62",
+            "value": "medium",
+            "name": "Medium"
+          },
+          {
+            "_uid": "8f426b1c-2baf-43e5-818d-566f436645b1",
+            "value": "large",
+            "name": "Large"
+          },
+          {
+            "_uid": "0c6541ff-33cc-4e84-9182-860d885fab5f",
+            "value": "none",
+            "name": "None"
+          }
+        ],
+        "default_value": "none",
+        "id": "KY9ahAYkQ4aEmTDyH_XZqw",
+        "description": "Amount of space inside the section around content. Defaults to None.",
+        "tooltip": true
+      },
+      "minHeightDesktop": {
+        "type": "number",
+        "pos": 4,
+        "min_value": 0,
+        "id": "4ewggszCTSOGZmlDco9zkQ",
+        "description": "Minimum section height on desktop in pixels.",
+        "display_name": "Min. Height - Desktop",
+        "tooltip": true
+      },
+      "minHeightMobile": {
+        "type": "number",
+        "pos": 5,
+        "id": "jNR397oEQKyucp9TwVdu_Q",
+        "min_value": 0,
+        "description": "Minimum section height on mobile in pixels. Uses desktop value if not provided.",
+        "display_name": "Min. Height - Mobile",
+        "tooltip": true
+      },
+      "horizontalContentAlignment": {
+        "type": "option",
+        "pos": 6,
+        "use_uuid": true,
+        "options": [
+          {
+            "_uid": "c0a5a5a0-8e6e-4b8c-9388-efe4bf31f944",
+            "name": "Left",
+            "value": "Left"
+          },
+          {
+            "_uid": "42e8af2a-0877-4482-85ba-ad8e3c50403f",
+            "value": "Center",
+            "name": "Center"
+          },
+          {
+            "_uid": "8bde5f59-3d47-49ca-9f7c-0b69dcdff5b8",
+            "value": "Right",
+            "name": "Right"
+          }
+        ],
+        "default_value": "Center",
+        "id": "3-1hyN1fRPyk1nqxcL-yDw",
+        "description": "Horizontal alignment of content within the section. Defaults to Center.",
+        "tooltip": true
+      },
+      "verticalContentAlignment": {
+        "type": "option",
+        "pos": 7,
+        "use_uuid": true,
+        "options": [
+          {
+            "_uid": "112eae0e-49b8-4dd3-84b6-ca9969dd8a32",
+            "name": "Top",
+            "value": "Top"
+          },
+          {
+            "_uid": "36f01cd5-3e0e-4b01-8349-b2964ece7847",
+            "value": "Middle",
+            "name": "Middle"
+          },
+          {
+            "_uid": "75d74b12-2836-4e3c-96bb-1f1f851b7870",
+            "value": "Bottom",
+            "name": "Bottom"
+          }
+        ],
+        "default_value": "Middle",
+        "id": "oUDmpucHQsy32a1kYvItzg",
+        "description": "Vertical alignment of content within the section. Defaults to Middle.",
+        "tooltip": true
+      },
+      "content": {
+        "type": "bloks",
+        "pos": 8,
+        "restrict_type": "",
+        "restrict_components": true,
+        "id": "daz5qbZJTvGelX20tZPFIg",
+        "component_whitelist": [
+          "AccordionComponent",
+          "ButtonComponent",
+          "DividerComponent",
+          "GridComponent",
+          "ImageComponent",
+          "LinkComponent",
+          "RichTextComponent",
+          "SectionComponent",
+          "SliderComponent",
+          "TextComponent",
+          "VideoComponent",
+          "ProductSliderComponent",
+          "SmartSortingProductsSliderComponent"
+        ],
+        "description": "All content inside this section. Add any combination of components.",
+        "tooltip": true
+      }
+    },
+    "image": null,
+    "preview_field": "content",
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Section",
+    "component_group_uuid": "f10ab040-8c51-44b7-93b7-2bc8c0e197ca",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "SliderComponent",
+    "display_name": "Slider",
+    "description": "A horizontal slider/carousel that displays multiple items one at a time. Users can swipe or use navigation arrows to browse through items.",
+    "created_at": "2025-08-07T14:21:03.296Z",
+    "updated_at": "2025-12-02T10:56:10.155Z",
+    "id": 77360592067089,
+    "schema": {
+      "showNavigationArrows": {
+        "type": "boolean",
+        "pos": 0,
+        "inline_label": true,
+        "default_value": true,
+        "id": "gr9twGdpS_6kGegTux0dKw",
+        "description": "When enabled, displays left and right arrow buttons for navigation. Defaults to enabled.",
+        "tooltip": true
+      },
+      "showPaginationIndicators": {
+        "type": "boolean",
+        "pos": 1,
+        "id": "xcy7gkI9R0WZzhOGwTYlzA",
+        "default_value": true,
+        "inline_label": true,
+        "description": "When enabled, displays dots at the bottom showing active slide. Defaults to enabled.",
+        "tooltip": true
+      },
+      "content": {
+        "type": "bloks",
+        "pos": 2,
+        "id": "71NLyDBiQ4GNrqiEY3mQfQ",
+        "restrict_type": "",
+        "restrict_components": true,
+        "component_whitelist": [
+          "AccordionComponent",
+          "ButtonComponent",
+          "DividerComponent",
+          "GridComponent",
+          "ImageComponent",
+          "LinkComponent",
+          "RichTextComponent",
+          "SectionComponent",
+          "SliderComponent",
+          "TextComponent",
+          "VideoComponent",
+          "ProductSliderComponent",
+          "SmartSortingProductsSliderComponent"
+        ],
+        "display_name": "Test Slider",
+        "description": "Items to display in the slider. Each item appears as a separate slide.",
+        "tooltip": true
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Slider",
+    "component_group_uuid": "ef9dcdb3-7565-4858-b458-4d8df1c7f47d",
+    "color": null,
+    "icon": "block-center-m",
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "SmartSortingProductsSliderComponent",
+    "display_name": "Smart Sorting Product Slider",
+    "description": "A product slider that automatically selects and displays products using smart sorting algorithms. Perfect for showing personalized or algorithm-driven product recommendations.",
+    "created_at": "2025-11-03T11:56:14.372Z",
+    "updated_at": "2025-12-02T10:57:51.067Z",
+    "id": 108467709439203,
+    "schema": {
+      "smartSortingKey": {
+        "type": "option",
+        "pos": 0,
+        "use_uuid": true,
+        "id": "JO0pUGIEQCa64ZMi5poo-w",
+        "options": [
+          {
+            "_uid": "4bf237b5-3256-42fd-8b90-37bce6ae5ecb",
+            "name": "Sales Push",
+            "value": "scayle:v1:sales-push"
+          },
+          {
+            "_uid": "5c2d2409-c861-4bc6-a287-26ecd43e9ad6",
+            "value": "scayle:v1:new-arrivals",
+            "name": "New Arrivals"
+          },
+          {
+            "_uid": "42a2154e-5ff3-44e7-adcf-6589fa5ad560",
+            "value": "scayle:v1:balanced-offerings",
+            "name": "Balanced Offerings"
+          },
+          {
+            "_uid": "d6a924a3-4bd3-40f8-93a3-0257ccbbdeef",
+            "value": "scayle:v1:inventory-optimization",
+            "name": "Inventory Optimization"
+          },
+          {
+            "_uid": "5900850f-a9e0-4935-8680-9affa16baf80",
+            "value": "scayle:v1:luxury-promotion",
+            "name": "Luxury Promotion"
+          },
+          {
+            "_uid": "4981bf7a-239a-4415-a324-5da3c67a4c6e",
+            "value": "scayle:v1:stock-coverage",
+            "name": "Stock Coverage"
+          },
+          {
+            "_uid": "002be0b6-76df-4775-8d29-00b4386ac277",
+            "value": "scayle:v1:topseller",
+            "name": "Topseller"
+          },
+          {
+            "_uid": "4ed4cfe3-82f9-4e0e-95ba-c9ddd9b56775",
+            "value": "scayle:v1:revenue-max",
+            "name": "Revenue Max"
+          },
+          {
+            "_uid": "1c1012b9-086e-417f-a943-bcde38e994b7",
+            "value": "scayle:v1:recently-popular",
+            "name": "Recently Popular"
+          },
+          {
+            "_uid": "15191872-4fea-46b9-8d04-2fd28f4703b2",
+            "value": "scayle:v1:trending",
+            "name": "Trending"
+          }
+        ],
+        "required": true,
+        "description": "SCAYLE Storefront Smart Sorting Key (algorithm) used to automatically select and sort products.",
+        "tooltip": true
+      },
+      "title": {
+        "type": "text",
+        "pos": 1,
+        "id": "jiQx5hMRRfmSo-BX0DQc9g",
+        "description": "Heading displayed above the product slider.",
+        "tooltip": true
+      },
+      "categoryId": {
+        "type": "number",
+        "pos": 2,
+        "id": "v2BHf5W4SzW0nzttROzbBg",
+        "description": "Limit products to a specific category by entering the category ID number.",
+        "tooltip": true
+      },
+      "brandId": {
+        "type": "number",
+        "pos": 3,
+        "id": "uHFiFJpVTduKr4BRq_uFwA",
+        "description": "Limit products to a specific brand by entering the brand ID number.",
+        "tooltip": true
+      },
+      "limit": {
+        "type": "number",
+        "pos": 4,
+        "id": "zvndC4AFRF64n5SMs5Yz7A",
+        "min_value": 1,
+        "steps": 1,
+        "default_value": "10",
+        "description": "Maximum number of products to display in the slider.",
+        "translatable": false,
+        "tooltip": true
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Smart Sorting Product Slider",
+    "component_group_uuid": "ef9dcdb3-7565-4858-b458-4d8df1c7f47d",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "TextComponent",
+    "display_name": "Text",
+    "description": "A simple text element that can display as a heading or paragraph. Use this for short text content that doesn't need rich formatting.",
+    "created_at": "2025-08-07T12:13:29.677Z",
+    "updated_at": "2025-12-02T10:58:26.503Z",
+    "id": 77329242842985,
+    "schema": {
+      "content": {
+        "type": "text",
+        "pos": 0,
+        "translatable": false,
+        "required": true,
+        "id": "IVCYqQnhTKyQLlLoT-Z8Tg",
+        "description": "The actual text stringThe text to display.",
+        "tooltip": true
+      },
+      "textType": {
+        "type": "option",
+        "pos": 1,
+        "use_uuid": true,
+        "options": [
+          {
+            "_uid": "17cd6717-8cb1-448d-9333-cbf5a7eebcad",
+            "name": "Paragraph",
+            "value": "p"
+          },
+          {
+            "_uid": "7cd91e1b-a315-4afb-80f9-c2825d7252b5",
+            "value": "h1",
+            "name": "Heading 1"
+          },
+          {
+            "_uid": "da53cb04-e0f8-4baf-8e19-010047e7e76d",
+            "value": "h2",
+            "name": "Heading 2"
+          },
+          {
+            "_uid": "e7917e8e-ace9-4617-a93a-d80a660c82e7",
+            "value": "h3",
+            "name": "Heading 3"
+          },
+          {
+            "_uid": "46db309c-8fed-4c9b-b9a8-1ff67740b770",
+            "value": "h4",
+            "name": "Heading 4"
+          }
+        ],
+        "default_value": "p",
+        "id": "mdzDY4JaSBa6DYd3cS2XMQ",
+        "required": false,
+        "description": "HTML element type for the text. Defaults to paragraph.",
+        "tooltip": true
+      }
+    },
+    "image": null,
+    "preview_field": "content",
+    "is_root": false,
+    "preview_tmpl": "{{@if(it.textType === 'h1')}}\n<div class=\"font-20\">\n    {{it.content}}\n</div>\n{{#elif(it.textType === 'h2')}}\n<div class=\"font-16\">\n    {{it.content}}\n</div>\n{{#elif(it.textType === 'h3')}}\n<div class=\"font-12\">\n    {{it.content}}\n</div>\n{{#elif(it.textType === 'h4')}}\n<div class=\"font-10\">\n    {{it.content}}\n</div>\n{{#else}}\n<div>\n    {{it.content}}\n</div>\n{{/if}}",
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Text",
+    "component_group_uuid": "ef9dcdb3-7565-4858-b458-4d8df1c7f47d",
+    "color": null,
+    "icon": "block-text-l",
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "VideoComponent",
+    "display_name": "Video",
+    "description": "Displays a video with a preview image. The video can autoplay or require user interaction to start.",
+    "created_at": "2025-08-07T13:37:51.867Z",
+    "updated_at": "2025-12-02T10:59:35.828Z",
+    "id": 77349977573738,
+    "schema": {
+      "video": {
+        "type": "asset",
+        "pos": 0,
+        "required": true,
+        "filetypes": [
+          "videos"
+        ],
+        "id": "3tbw3MNzTNCYTY-ZesEy2w",
+        "description": "The video file to display.",
+        "tooltip": true
+      },
+      "previewImageDesktop": {
+        "type": "asset",
+        "pos": 1,
+        "id": "3GjCjHOzRLifIVl7FGUYWw",
+        "required": true,
+        "filetypes": [
+          "images"
+        ],
+        "description": "Thumbnail image shown before video plays on desktop.",
+        "tooltip": true
+      },
+      "previewImageMobile": {
+        "type": "asset",
+        "pos": 2,
+        "id": "B6msTZVhTAmAhKgj_KAbeA",
+        "filetypes": [
+          "images"
+        ],
+        "description": "Thumbnail image for mobile. If not provided, desktop image is used.",
+        "tooltip": true
+      },
+      "aspectRatio": {
+        "type": "option",
+        "pos": 3,
+        "use_uuid": true,
+        "id": "vz-6AhYyQN2-lWpZ50PTFA",
+        "options": [
+          {
+            "_uid": "369f0a30-0490-44b7-95af-e8724691a754",
+            "name": "Square",
+            "value": "1:1"
+          },
+          {
+            "_uid": "e777fb94-e559-44b1-92a2-189dcf563cc1",
+            "value": "16:9",
+            "name": "Landscape (16:9)"
+          },
+          {
+            "_uid": "5f6bc21d-7228-451c-8726-5ff86f5dd8d7",
+            "value": "4:3",
+            "name": "Landscape (4:3)"
+          }
+        ],
+        "default_value": "16:9",
+        "description": "Shape and proportions of the video player. Defaults to 16:9.",
+        "tooltip": true
+      },
+      "autoplay": {
+        "type": "boolean",
+        "pos": 4,
+        "id": "h8TFT9VoSGmeRaK1IJXprw",
+        "default_value": true,
+        "inline_label": true,
+        "description": "When enabled, video starts automatically on page load. Defaults to enabled.",
+        "tooltip": true
+      },
+      "muted": {
+        "type": "boolean",
+        "pos": 5,
+        "id": "ViUYukcCRPi5RQN53EKI6A",
+        "inline_label": true,
+        "default_value": true,
+        "description": "When enabled, video plays without sound. Defaults to enabled.",
+        "tooltip": true
+      },
+      "loop": {
+        "type": "boolean",
+        "pos": 6,
+        "id": "iZVfeA3UQ5-9xENF1eaCTA",
+        "inline_label": true,
+        "default_value": true,
+        "description": "When enabled, video restarts automatically when it ends. Defaults to enabled.",
+        "tooltip": true
+      },
+      "showControls": {
+        "type": "boolean",
+        "pos": 7,
+        "id": "KhcI3ve8SnmL9Wud60OxWw",
+        "inline_label": true,
+        "description": "When enabled, displays video player controls. Defaults to disabled.",
+        "tooltip": true
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": "<div>\n    {{@image(it.previewImageDesktop.filename)/}}\n</div>",
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Video",
+    "component_group_uuid": "ef9dcdb3-7565-4858-b458-4d8df1c7f47d",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  }
+]

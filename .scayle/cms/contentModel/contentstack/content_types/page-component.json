@@ -1,0 +1,150 @@
+{
+  "title": "Page",
+  "uid": "page-component",
+  "schema": [
+    {
+      "data_type": "text",
+      "display_name": "Title",
+      "field_metadata": {
+        "_default": true,
+        "description": "Title used to organize the content within the CMS.",
+        "version": 3
+      },
+      "mandatory": true,
+      "uid": "title",
+      "unique": true,
+      "multiple": false,
+      "non_localizable": false
+    },
+    {
+      "data_type": "text",
+      "display_name": "URL",
+      "uid": "url",
+      "field_metadata": { "_default": true, "version": 3 },
+      "multiple": false,
+      "unique": false,
+      "mandatory": true,
+      "non_localizable": true
+    },
+    {
+      "data_type": "reference",
+      "display_name": "Content",
+      "reference_to": [
+        "video-component",
+        "text-component",
+        "smart_sorting_products_slider-component",
+        "slider-component",
+        "section-component",
+        "richtext-component",
+        "recentlyviewedproducts-component",
+        "link-component",
+        "image-component",
+        "grid-component",
+        "divider-component",
+        "button-component",
+        "accordion-component"
+      ],
+      "field_metadata": {
+        "ref_multiple": true,
+        "ref_multiple_content_types": true,
+        "default_value": null,
+        "description": "CMS page content. Add sections, images, text, and other components here."
+      },
+      "uid": "content",
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "group",
+      "display_name": "SEO",
+      "field_metadata": { "description": "", "instruction": "" },
+      "schema": [
+        {
+          "data_type": "text",
+          "display_name": "Meta Title",
+          "uid": "meta_title",
+          "field_metadata": {
+            "description": "Page title for browser tabs and search results. Keep under 60 characters for SEO.",
+            "default_value": "",
+            "version": 3
+          },
+          "format": "",
+          "error_messages": { "format": "" },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        },
+        {
+          "data_type": "text",
+          "display_name": "Meta Description",
+          "uid": "meta_description",
+          "field_metadata": {
+            "description": "Brief page description for search results. Keep under 160 characters.",
+            "default_value": "",
+            "version": 3
+          },
+          "format": "",
+          "error_messages": { "format": "" },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        },
+        {
+          "data_type": "text",
+          "display_name": "Robots",
+          "display_type": "dropdown",
+          "enum": {
+            "advanced": true,
+            "choices": [
+              {
+                "value": "index, follow",
+                "key": "Index Page and follow Links"
+              },
+              {
+                "value": "noindex, nofollow",
+                "key": "Hide Page, and dont Follow Links"
+              },
+              {
+                "value": "index, nofollow",
+                "key": "Index Page, but Ignore Links"
+              },
+              {
+                "value": "noindex, follow",
+                "key": "Hide Page, but Follow Link"
+              }
+            ]
+          },
+          "multiple": false,
+          "uid": "robots",
+          "field_metadata": {
+            "description": "Controls how search engines index this page. ",
+            "default_value": "",
+            "default_key": "",
+            "version": 3
+          },
+          "mandatory": false,
+          "non_localizable": false,
+          "unique": false
+        }
+      ],
+      "uid": "seo",
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    }
+  ],
+  "description": "The main page component that contains all page content and SEO settings. This is typically the root component for any page.",
+  "options": {
+    "is_page": true,
+    "singleton": false,
+    "sub_title": [],
+    "title": "title",
+    "url_pattern": "/:title",
+    "url_prefix": "/"
+  }
+}

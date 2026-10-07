@@ -1,0 +1,125 @@
+{
+  "title": "Image",
+  "uid": "image-component",
+  "schema": [
+    {
+      "data_type": "text",
+      "display_name": "Title",
+      "field_metadata": {
+        "_default": true,
+        "description": "Title used to organize the content within the CMS.",
+        "version": 3
+      },
+      "mandatory": true,
+      "uid": "title",
+      "unique": true,
+      "multiple": false,
+      "non_localizable": false
+    },
+    {
+      "data_type": "file",
+      "display_name": "Image Desktop",
+      "uid": "image_desktop",
+      "field_metadata": {
+        "description": "Image displayed on desktop and tablet. Used on mobile if no mobile image is provided.",
+        "rich_text_type": "standard",
+        "image": true
+      },
+      "mandatory": true,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false,
+      "dimension": {
+        "width": { "min": null, "max": null },
+        "height": { "min": null, "max": null }
+      }
+    },
+    {
+      "data_type": "file",
+      "display_name": "Image Mobile",
+      "uid": "image_mobile",
+      "extensions": [],
+      "field_metadata": {
+        "description": "Image displayed on mobile devices. If not provided, desktop image is used.",
+        "rich_text_type": "standard"
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "text",
+      "display_name": "Alt Text",
+      "uid": "alt_text",
+      "field_metadata": {
+        "description": "Text description of the image for accessibility and SEO.",
+        "default_value": "",
+        "version": 3
+      },
+      "format": "",
+      "error_messages": { "format": "" },
+      "mandatory": true,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "text",
+      "display_name": "Aspect Ratio Desktop",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": true,
+        "choices": [
+          { "value": "original", "key": "Original" },
+          { "value": "1:1", "key": "Square" },
+          { "value": "16:9", "key": "Landscape (16:9)" },
+          { "value": "3:4", "key": "Landscale (4:3)" }
+        ]
+      },
+      "multiple": false,
+      "uid": "aspect_ratio_desktop",
+      "field_metadata": {
+        "description": "Image proportions on desktop. Defaults to Original.",
+        "default_value": "original",
+        "default_key": "Original",
+        "version": 3
+      },
+      "mandatory": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "text",
+      "display_name": "Aspect Ratio Mobile",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": true,
+        "choices": [
+          { "value": "original", "key": "Original" },
+          { "value": "1:1", "key": "Square" },
+          { "value": "16:9", "key": "Landscape (16:9)" },
+          { "value": "4:3", "key": "Landscape (4:3)" }
+        ]
+      },
+      "multiple": false,
+      "uid": "aspect_ratio_mobile",
+      "field_metadata": {
+        "description": "Image proportions on mobile. Defaults to Original.",
+        "default_value": "original",
+        "default_key": "Original",
+        "version": 3
+      },
+      "mandatory": false,
+      "non_localizable": false,
+      "unique": false
+    }
+  ],
+  "description": "Displays an image with responsive behavior, showing different images on mobile and desktop if needed. Images automatically optimize for performance.",
+  "options": {
+    "is_page": false,
+    "singleton": false,
+    "sub_title": [],
+    "title": "title"
+  }
+}

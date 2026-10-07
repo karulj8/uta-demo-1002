@@ -1,0 +1,5 @@
+{
+  "body": "./schemas/accordion-item-component-schema.json",
+  "schemaId": "https://scayle.com/schemas/accordion-item-component.json",
+  "validationLevel": "CONTENT_TYPE"
+}

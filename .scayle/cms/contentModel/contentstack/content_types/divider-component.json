@@ -1,0 +1,64 @@
+{
+  "title": "Divider",
+  "uid": "divider-component",
+  "schema": [
+    {
+      "data_type": "text",
+      "display_name": "Title",
+      "field_metadata": {
+        "_default": true,
+        "description": "Title used to organize the content within the CMS.",
+        "version": 3
+      },
+      "mandatory": true,
+      "uid": "title",
+      "unique": true,
+      "multiple": false,
+      "non_localizable": false
+    },
+    {
+      "data_type": "text",
+      "display_name": "Height",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": true,
+        "choices": [
+          { "value": "small", "key": "Small" },
+          { "value": "medium", "key": "Medium" },
+          { "value": "large", "key": "Large" }
+        ]
+      },
+      "multiple": false,
+      "uid": "height",
+      "field_metadata": {
+        "description": "Amount of vertical spacing. Defaults to Small.",
+        "default_value": "small",
+        "default_key": "Small",
+        "version": 3
+      },
+      "mandatory": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "boolean",
+      "display_name": "Show Line",
+      "uid": "show_line",
+      "field_metadata": {
+        "description": "When enabled, displays a horizontal line. When disabled, creates only empty space.",
+        "default_value": false
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    }
+  ],
+  "description": "A spacing element that creates visual separation between content sections. Use dividers to break up long pages and improve readability.",
+  "options": {
+    "is_page": false,
+    "singleton": false,
+    "sub_title": [],
+    "title": "title"
+  }
+}

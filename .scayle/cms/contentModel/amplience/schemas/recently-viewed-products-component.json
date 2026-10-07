@@ -1,0 +1,5 @@
+{
+  "body": "./schemas/recently-viewed-products-component-schema.json",
+  "schemaId": "https://scayle.com/schemas/recently-viewed-products-component.json",
+  "validationLevel": "CONTENT_TYPE"
+}

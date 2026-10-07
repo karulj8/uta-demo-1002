@@ -1,0 +1,411 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scayle.com/schemas/grid-component.json",
+  "title": "Grid",
+  "description": "A flexible layout tool that arranges content in columns. Perfect for creating side-by-side layouts, product grids, or any organized content arrangement.",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "columns_desktop": {
+      "title": "Number of Columns - Desktop",
+      "description": "Number of columns displayed on desktop and tablet screens.",
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 6,
+      "default": 2
+    },
+    "columns_mobile": {
+      "title": "Number of Columns - Mobile",
+      "description": "Number of columns displayed on mobile devices.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3,
+      "default": 1
+    },
+    "gap_column_desktop": {
+      "title": "Gap size between Columns - Desktop",
+      "description": "Horizontal spacing between columns on mobile. Defaults to None.",
+      "type": "string",
+      "enum": [
+        "none",
+        "small",
+        "medium",
+        "large"
+      ],
+      "default": "none"
+    },
+    "gap_row_desktop": {
+      "title": "Gap size between Rows - Desktop",
+      "description": "Vertical spacing between rows on desktop. Defaults to None.",
+      "type": "string",
+      "enum": [
+        "none",
+        "small",
+        "medium",
+        "large"
+      ],
+      "default": "none"
+    },
+    "gap_column_mobile": {
+      "title": "Gap size between Columns - Mobile",
+      "description": "Horizontal spacing between columns on mobile. Defaults to None.",
+      "type": "string",
+      "enum": [
+        "none",
+        "small",
+        "medium",
+        "large"
+      ],
+      "default": "none"
+    },
+    "gap_row_mobile": {
+      "title": "Gap size between Rows - Mobile",
+      "description": "Vertical spacing between rows on mobile. Defaults to None.",
+      "type": "string",
+      "enum": [
+        "none",
+        "small",
+        "medium",
+        "large"
+      ],
+      "default": "none"
+    },
+    "vertical_content_alignment": {
+      "title": "Vertical Content Alignment",
+      "description": "Vertical alignment of content within grid cells. Defaults to Middle.",
+      "type": "string",
+      "enum": [
+        "Top",
+        "Middle",
+        "Bottom"
+      ],
+      "default": "Middle"
+    },
+    "horizontal_content_alignment": {
+      "title": "Horizontal Content Alignment",
+      "description": "Horizontal alignment of content within grid cells. Defaults to Center.",
+      "type": "string",
+      "enum": [
+        "Left",
+        "Center",
+        "Right"
+      ],
+      "default": "Center"
+    },
+    "content": {
+      "title": "Column Content",
+      "description": "Content items to display in the grid. Each item appears in its own grid cell.",
+      "type": "array",
+      "ui:component": {
+        "params": {
+          "icons": {
+            "text": "typography",
+            "richText": "article",
+            "button": "link",
+            "link": "link",
+            "divider": "separator",
+            "image": "photo-plus",
+            "video": "video-plus",
+            "productSlider": "shopping-cart",
+            "smartSorting": "numbers",
+            "accordion": "layout-list",
+            "slider": "carousel-horizontal",
+            "grid": "columns-2",
+            "section": "section"
+          }
+        }
+      },
+      "items": {
+        "oneOf": [
+          {
+            "title": "Text",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "text",
+                "ui:component": "none"
+              },
+              "text": {
+                "title": "Text",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/text-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Rich Text",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "richText",
+                "ui:component": "none"
+              },
+              "richText": {
+                "title": "Rich Text",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/rich-text-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Button",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "button",
+                "ui:component": "none"
+              },
+              "button": {
+                "title": "Button",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/button-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Link",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "link",
+                "ui:component": "none"
+              },
+              "link": {
+                "title": "Link",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/link-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Divider",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "divider",
+                "ui:component": "none"
+              },
+              "divider": {
+                "title": "Divider",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/divider-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Image",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "image",
+                "ui:component": "none"
+              },
+              "image": {
+                "title": "Image",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/image-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Video",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "video",
+                "ui:component": "none"
+              },
+              "video": {
+                "title": "Video",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/video-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Product Slider",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "productSlider",
+                "ui:component": "none"
+              },
+              "productSlider": {
+                "title": "Product Slider",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/product-slider-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Smart Sorting Products",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "smartSorting",
+                "ui:component": "none"
+              },
+              "smartSorting": {
+                "title": "Smart Sorting",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/smart-sorting-products-slider-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Accordion",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "accordion",
+                "ui:component": "none"
+              },
+              "accordion": {
+                "title": "Accordion",
+                "allOf": [
+                  {
+                    "$ref": "https://scayle.com/schemas/accordion-component.json"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Grid",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "grid",
+                "ui:component": "none"
+              },
+              "grid": {
+                "title": "Grid",
+                "description": "Links an existing Grid content item. Modeled as a content relationship rather than inline content so that grids can be nested without introducing a cyclic schema dependency.",
+                "allOf": [
+                  {
+                    "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+                  },
+                  {
+                    "properties": {
+                      "contentType": {
+                        "enum": [
+                          "https://scayle.com/schemas/grid-component.json"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          },
+          {
+            "title": "Section",
+            "type": "object",
+            "properties": {
+              "componentType": {
+                "const": "section",
+                "ui:component": "none"
+              },
+              "section": {
+                "title": "Section",
+                "description": "Links an existing Section content item. Modeled as a content relationship rather than inline content so that a grid can contain a section without introducing a cyclic schema dependency.",
+                "allOf": [
+                  {
+                    "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+                  },
+                  {
+                    "properties": {
+                      "contentType": {
+                        "enum": [
+                          "https://scayle.com/schemas/section-component.json"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "required": [
+              "componentType"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "propertyOrder": [
+    "columns_desktop",
+    "columns_mobile",
+    "gap_column_desktop",
+    "gap_row_desktop",
+    "gap_column_mobile",
+    "gap_row_mobile",
+    "vertical_content_alignment",
+    "horizontal_content_alignment",
+    "content"
+  ]
+}

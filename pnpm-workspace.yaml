@@ -1,0 +1,64 @@
+packages:
+  - "./"
+  - "!testing/playwright/"
+  - "!testing/artillery/"
+overrides:
+  "@grpc/grpc-js": ^1.14.4
+  "@nuxt/kit": 4.5.2
+  "@nuxt/schema": 4.5.2
+  "@storybook/builder-vite": 9.1.20
+  "@storybook/vue3-vite": 9.1.20
+  "@storybook/vue3": 9.1.20
+  vite: 8.2.1
+  "@vue/compiler-core": 3.5.41
+  "@vue/compiler-dom": 3.5.41
+  "@vue/compiler-sfc": 3.5.41
+  "@vue/compiler-ssr": 3.5.41
+  "@vue/shared": 3.5.41
+  esbuild: 0.28.2
+  globals: 17.11.0
+  h3: 1.15.11
+  import-in-the-middle: 1.15.0
+  serialize-javascript: 7.0.7
+  tar: ^7.5.21
+  unicorn-magic: 0.4.0
+  svgo: ^4.0.1
+  vue: 3.5.41
+  lodash: ^4.18.1
+  lodash-es: ^4.18.1
+  sharp: ^0.35.3
+  "@opentelemetry/propagator-jaeger@<2.9.0": ^2.9.0
+  adm-zip@<0.6.0: ^0.6.0
+  ajv@<6.14.0: ^6.14.0
+  axios: ^1.18.1
+  sharp@<0.35.0: ^0.35.0
+  tmp: ^0.2.6
+  uuid@<11.1.1: ^11.1.1
+  brace-expansion@<1.1.18: ^1.1.18
+  brace-expansion@>=2.0.0 <2.1.4: ^2.1.4
+  brace-expansion@>=3.0.0 <=5.0.8: ^5.0.9
+  undici@>=7.0.0 <7.29.0: ^8.0.0
+strictPeerDependencies: false
+preferWorkspacePackages: false
+publicHoistPattern:
+  - "*"
+packageImportMethod: clone-or-copy
+nodeLinker: hoisted
+ignoreWorkspaceRootCheck: true
+allowBuilds:
+  "@contentstack/cli": false
+  "@contentstack/marketplace-sdk": false
+  "@parcel/watcher": false
+  contentful-cli: false
+  core-js: false
+  es5-ext: false
+  esbuild: false
+  protobufjs: false
+  sharp: false
+  spawn-sync: false
+  unrs-resolver: false
+  vue-demi: false
+  yarn: false
+minimumReleaseAgeExclude:
+  - undici@7.29.0
+  - '@scayle/unstorage-scayle-kv-driver@3.1.0'

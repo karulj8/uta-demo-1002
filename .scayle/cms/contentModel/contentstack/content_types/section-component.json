@@ -1,0 +1,211 @@
+{
+  "title": "Section",
+  "uid": "section-component",
+  "schema": [
+    {
+      "data_type": "text",
+      "display_name": "Title",
+      "field_metadata": {
+        "_default": true,
+        "description": "Title used to organize the content within the CMS.",
+        "version": 3
+      },
+      "mandatory": true,
+      "uid": "title",
+      "unique": true,
+      "multiple": false,
+      "non_localizable": false
+    },
+    {
+      "data_type": "text",
+      "display_name": "Background Color",
+      "uid": "background_color",
+      "field_metadata": {
+        "description": "Background color for the section using a hex color code. Leave empty for transparent.",
+        "default_value": "",
+        "placeholder": "#000000",
+        "version": 3
+      },
+      "format": "^#(?:[0-9a-fA-F]{3}){1,2}$",
+      "error_messages": { "format": "" },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false,
+      "max": 7
+    },
+    {
+      "data_type": "file",
+      "display_name": "Background Image Desktop",
+      "uid": "background_image_desktop",
+      "field_metadata": {
+        "description": "Background image for desktop. Appears behind all section content.",
+        "rich_text_type": "standard",
+        "image": true
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false,
+      "dimension": {
+        "width": { "min": null, "max": null },
+        "height": { "min": null, "max": null }
+      }
+    },
+    {
+      "data_type": "file",
+      "display_name": "Background Image Mobile",
+      "uid": "background_image_mobile",
+      "field_metadata": {
+        "description": "Background image for mobile. If not provided, desktop image is used.",
+        "rich_text_type": "standard",
+        "image": true
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false,
+      "dimension": {
+        "width": { "min": null, "max": null },
+        "height": { "min": null, "max": null }
+      }
+    },
+    {
+      "data_type": "text",
+      "display_name": "Padding",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": true,
+        "choices": [
+          { "value": "small", "key": "Small" },
+          { "value": "medium", "key": "Medium" },
+          { "value": "large", "key": "Large" },
+          { "value": "none", "key": "None" }
+        ]
+      },
+      "multiple": false,
+      "uid": "padding",
+      "field_metadata": {
+        "description": "Amount of space inside the section around content. Defaults to None.",
+        "default_value": "none",
+        "default_key": "None",
+        "version": 3
+      },
+      "mandatory": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "number",
+      "display_name": "Min. Height - Desktop",
+      "uid": "min_height_desktop",
+      "field_metadata": {
+        "description": "Minimum section height on desktop in pixels.",
+        "default_value": ""
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false,
+      "min": 0
+    },
+    {
+      "data_type": "number",
+      "display_name": "Min. Height - Mobile",
+      "uid": "min_height_mobile",
+      "field_metadata": {
+        "description": "Minimum section height on mobile in pixels. Uses desktop value if not provided.",
+        "default_value": ""
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false,
+      "min": 0
+    },
+    {
+      "data_type": "text",
+      "display_name": "Horizontal Content Alignment",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": true,
+        "choices": [
+          { "value": "Left", "key": "Left" },
+          { "value": "Center", "key": "Center" },
+          { "value": "Right", "key": "Right" }
+        ]
+      },
+      "multiple": false,
+      "uid": "horizontal_content_alignment",
+      "field_metadata": {
+        "description": "Horizontal alignment of content within the section. Defaults to Center.",
+        "default_value": "Center",
+        "default_key": "Center",
+        "version": 3
+      },
+      "mandatory": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "text",
+      "display_name": "Vertical Content Alignment",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": true,
+        "choices": [
+          { "value": "Top", "key": "Top" },
+          { "value": "Middle", "key": "Middle" },
+          { "value": "Bottom", "key": "Bottom" }
+        ]
+      },
+      "multiple": false,
+      "uid": "vertical_content_alignment",
+      "field_metadata": {
+        "description": "Vertical alignment of content within the section. Defaults to Middle.",
+        "default_value": "Middle",
+        "default_key": "Middle",
+        "version": 3
+      },
+      "mandatory": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "reference",
+      "display_name": "Content",
+      "reference_to": [
+        "video-component",
+        "text-component",
+        "smart_sorting_products_slider-component",
+        "slider-component",
+        "section-component",
+        "richtext-component",
+        "link-component",
+        "image-component",
+        "grid-component",
+        "divider-component",
+        "button-component",
+        "accordion-component"
+      ],
+      "field_metadata": {
+        "ref_multiple": true,
+        "ref_multiple_content_types": true,
+        "description": "All content inside this section. Add any combination of components.",
+        "default_value": null
+      },
+      "uid": "content",
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    }
+  ],
+  "description": "A container component that groups related content together. Sections can have backgrounds, padding, and alignment options. Think of it as a \"box\" for organizing content.",
+  "options": {
+    "is_page": false,
+    "singleton": false,
+    "sub_title": [],
+    "title": "title"
+  }
+}

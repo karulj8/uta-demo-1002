@@ -1,0 +1,19 @@
+{
+  "contentTypeUri": "https://scayle.com/schemas/recently-viewed-products-component.json",
+  "status": "ACTIVE",
+  "settings": {
+    "label": "Recently Viewed Products",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://bigcontent.io/cms/icons/ca-types-article.png"
+      }
+    ],
+    "visualizations": [],
+    "cards": []
+  },
+  "repositories": [
+    "content",
+    "contentde"
+  ]
+}

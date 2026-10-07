@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Automatically add focus outline styles to all focusable elements */
+  *:focus-visible {
+    @apply outline outline-2 -outline-offset-1 outline-white ring-0;
+    /* Ensure focus outline is visible for adjacent elements */
+    z-index: 1;
+
+    /*
+     We want to highlight focused elements. In order to work with border styles we need to use a box shadow.
+     Since we want to restrict the box shadows made available by tailwind we add the boxshadow styles manually to the global focus-visible styles instead of adding them to the tailwind config.
+    */
+    box-shadow:
+      var(--tw-ring-offset-shadow, 0 0 theme('colors.primary')),
+      var(--tw-ring-shadow, 0 0 theme('colors.primary')),
+      0 0 0 3px theme('colors.primary');
+  }
+
+  html {
+    scrollbar-gutter: stable;
+  }
+
+  body:has(dialog[open]),
+  body:has(.block-scrolling) {
+    overflow: hidden;
+  }
+
+  dialog {
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scayle.com/schemas/smart-sorting-products-slider-component.json",
+  "title": "Smart Sorting Product Slider",
+  "description": "A product slider that automatically selects and displays products using smart sorting algorithms. Perfect for showing personalized or algorithm-driven product recommendations.",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "headline": {
+      "title": "Title",
+      "description": "Heading displayed above the product slider.",
+      "type": "string"
+    },
+    "smart_sorting_key": {
+      "title": "Smart Sorting Key",
+      "description": "SCAYLE Storefront Smart Sorting Key (algorithm) used to automatically select and sort products.",
+      "type": "string",
+      "enum": [
+        "scayle:v1:sales-push",
+        "scayle:v1:new-arrivals",
+        "scayle:v1:balanced-offerings",
+        "scayle:v1:inventory-optimization",
+        "scayle:v1:luxury-promotion",
+        "scayle:v1:stock-coverage",
+        "scayle:v1:topseller",
+        "scayle:v1:revenue-max",
+        "scayle:v1:recently-popular",
+        "scayle:v1:trending"
+      ],
+      "default": "scayle:v1:topseller"
+    },
+    "category_id": {
+      "title": "CategoryId",
+      "description": "Limit products to a specific category by entering the category ID number.",
+      "type": "integer"
+    },
+    "brand_id": {
+      "title": "BrandId",
+      "description": "Limit products to a specific brand by entering the brand ID number.",
+      "type": "integer"
+    },
+    "limit": {
+      "title": "Limit",
+      "description": "Maximum number of products to display in the slider.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 24,
+      "default": 10
+    }
+  },
+  "required": [
+    "smart_sorting_key"
+  ],
+  "propertyOrder": [
+    "headline",
+    "smart_sorting_key",
+    "category_id",
+    "brand_id",
+    "limit"
+  ]
+}

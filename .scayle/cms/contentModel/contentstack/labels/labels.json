@@ -1,0 +1,45 @@
+{
+  "bltd817dd95251d527f": {
+    "name": "Content",
+    "parent": [],
+    "uid": "bltd817dd95251d527f",
+    "ACL": [],
+    "_version": 1,
+    "content_types": [
+      "accordion-component",
+      "accordion_item-component",
+      "button-component",
+      "image-component",
+      "link-component",
+      "recentlyviewedproducts-component",
+      "richtext-component",
+      "slider-component",
+      "smart_sorting_products_slider-component",
+      "text-component",
+      "video-component"
+    ]
+  },
+  "bltcde7498ca79006e7": {
+    "name": "Layout",
+    "parent": [],
+    "uid": "bltcde7498ca79006e7",
+    "ACL": [],
+    "_version": 1,
+    "content_types": [
+      "divider-component",
+      "grid-component",
+      "section-component"
+    ]
+  },
+  "blteb9f43a1faf9cceb": {
+    "name": "Page",
+    "parent": [],
+    "uid": "blteb9f43a1faf9cceb",
+    "ACL": [],
+    "_version": 1,
+    "content_types": [
+      "page-component",
+      "productlistingpage-component"
+    ]
+  }
+}

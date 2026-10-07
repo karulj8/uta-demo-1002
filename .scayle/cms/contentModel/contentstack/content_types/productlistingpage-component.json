@@ -1,0 +1,86 @@
+{
+  "title": "ProductListingPage",
+  "uid": "productlistingpage-component",
+  "schema": [
+    {
+      "data_type": "text",
+      "display_name": "Title",
+      "field_metadata": {
+        "_default": true,
+        "description": "Title used to organize the content within the CMS.",
+        "version": 3
+      },
+      "mandatory": true,
+      "uid": "title",
+      "unique": true,
+      "multiple": false,
+      "non_localizable": false
+    },
+    {
+      "data_type": "text",
+      "display_name": "URL",
+      "uid": "url",
+      "field_metadata": { "_default": true, "version": 3 },
+      "multiple": false,
+      "unique": false,
+      "mandatory": true,
+      "non_localizable": true
+    },
+    {
+      "data_type": "reference",
+      "display_name": "Teaser Content",
+      "reference_to": [
+        "text-component",
+        "slider-component",
+        "section-component",
+        "image-component"
+      ],
+      "field_metadata": {
+        "ref_multiple": false,
+        "ref_multiple_content_types": true,
+        "description": "Content displayed at the top of the product listing page, above the product grid."
+      },
+      "uid": "teaser_content",
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "reference",
+      "display_name": "SEO Content",
+      "reference_to": [
+        "video-component",
+        "text-component",
+        "slider-component",
+        "section-component",
+        "richtext-component",
+        "recentlyviewedproducts-component",
+        "link-component",
+        "image-component",
+        "divider-component",
+        "button-component",
+        "accordion-component"
+      ],
+      "field_metadata": {
+        "ref_multiple": false,
+        "ref_multiple_content_types": true,
+        "description": "Content displayed at the bottom of the product listing page, after the product grid. Useful for SEO."
+      },
+      "uid": "seo_content",
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    }
+  ],
+  "description": "A specialized page component for product category/listing pages. It includes both teaser content (shown at the top) and SEO content (shown at the bottom).",
+  "options": {
+    "is_page": true,
+    "singleton": false,
+    "sub_title": [],
+    "title": "title",
+    "url_pattern": "/:title",
+    "url_prefix": "/"
+  }
+}

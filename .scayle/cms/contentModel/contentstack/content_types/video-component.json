@@ -1,0 +1,153 @@
+{
+  "title": "Video",
+  "uid": "video-component",
+  "schema": [
+    {
+      "data_type": "text",
+      "display_name": "Title",
+      "field_metadata": {
+        "_default": true,
+        "description": "Title used to organize the content within the CMS.",
+        "version": 3
+      },
+      "mandatory": true,
+      "uid": "title",
+      "unique": true,
+      "multiple": false,
+      "non_localizable": false
+    },
+    {
+      "data_type": "file",
+      "display_name": "Video",
+      "uid": "video",
+      "extensions": ["mp4"],
+      "field_metadata": {
+        "description": "The video file to display.",
+        "rich_text_type": "standard"
+      },
+      "mandatory": true,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "file",
+      "display_name": "Preview Image - Desktop",
+      "uid": "previewimagedesktop",
+      "field_metadata": {
+        "description": "Thumbnail image shown before video plays on desktop.",
+        "rich_text_type": "standard",
+        "image": true
+      },
+      "mandatory": true,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false,
+      "dimension": {
+        "width": { "min": null, "max": null },
+        "height": { "min": null, "max": null }
+      }
+    },
+    {
+      "data_type": "file",
+      "display_name": "Preview Image - Mobile",
+      "uid": "previewimagemobile",
+      "field_metadata": {
+        "description": "Thumbnail image for mobile. If not provided, desktop image is used.",
+        "rich_text_type": "standard",
+        "image": true
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false,
+      "dimension": {
+        "width": { "min": null, "max": null },
+        "height": { "min": null, "max": null }
+      }
+    },
+    {
+      "data_type": "text",
+      "display_name": "Aspect Ratio",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": true,
+        "choices": [
+          { "value": "1:1", "key": "Square;1" },
+          { "value": "16:9", "key": "Landscape (16:9)" },
+          { "value": "4:3", "key": "Landscape (4:3)" }
+        ]
+      },
+      "multiple": false,
+      "uid": "aspect_ratio",
+      "field_metadata": {
+        "description": "Shape and proportions of the video player. Defaults to 16:9.",
+        "default_value": "16:9",
+        "default_key": "Landscape (16:9)",
+        "version": 3
+      },
+      "mandatory": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "boolean",
+      "display_name": "Autoplay",
+      "uid": "autoplay",
+      "field_metadata": {
+        "description": "When enabled, video starts automatically on page load. Defaults to enabled.",
+        "default_value": true
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "boolean",
+      "display_name": "Muted",
+      "uid": "muted",
+      "field_metadata": {
+        "description": "When enabled, video plays without sound. Defaults to enabled.",
+        "default_value": true
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "boolean",
+      "display_name": "Loop",
+      "uid": "loop",
+      "field_metadata": {
+        "description": "When enabled, video restarts automatically when it ends. Defaults to enabled.",
+        "default_value": true
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "boolean",
+      "display_name": "Show Controls",
+      "uid": "show_controls",
+      "field_metadata": {
+        "description": "When enabled, displays video player controls. Defaults to disabled.",
+        "default_value": false
+      },
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    }
+  ],
+  "description": "Displays a video with a preview image. The video can autoplay or require user interaction to start.",
+  "options": {
+    "is_page": false,
+    "singleton": false,
+    "sub_title": [],
+    "title": "title"
+  }
+}

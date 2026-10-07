@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scayle.com/schemas/product-slider-component.json",
+  "title": "Product Slider",
+  "description": "Displays a horizontal slider of products. Perfect for showcasing featured products, related items, or curated collections.",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "headline": {
+      "title": "Title",
+      "description": "Heading displayed above the product slider.",
+      "type": "string"
+    },
+    "product_ids": {
+      "title": "Products",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 24,
+      "items": {
+        "type": "integer"
+      }
+    }
+  },
+  "required": [
+    "product_ids"
+  ],
+  "propertyOrder": [
+    "headline",
+    "product_ids"
+  ]
+}

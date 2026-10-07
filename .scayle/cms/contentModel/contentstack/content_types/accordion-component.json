@@ -1,0 +1,59 @@
+{
+  "title": "Accordion",
+  "uid": "accordion-component",
+  "schema": [
+    {
+      "data_type": "text",
+      "display_name": "Title",
+      "field_metadata": {
+        "_default": true,
+        "description": "Title used to organize the content within the CMS.",
+        "version": 3
+      },
+      "mandatory": true,
+      "uid": "title",
+      "unique": true,
+      "multiple": false,
+      "non_localizable": false
+    },
+    {
+      "data_type": "text",
+      "display_name": "Display Title",
+      "uid": "display_title",
+      "field_metadata": {
+        "description": "Heading displayed above all accordion items.",
+        "default_value": "",
+        "version": 3
+      },
+      "format": "",
+      "error_messages": { "format": "" },
+      "mandatory": true,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "reference",
+      "display_name": "Content",
+      "reference_to": ["accordion_item-component"],
+      "field_metadata": {
+        "ref_multiple": true,
+        "ref_multiple_content_types": true,
+        "description": "List of accordion items that users can expand or collapse.",
+        "default_value": null
+      },
+      "uid": "content",
+      "mandatory": true,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    }
+  ],
+  "description": "A collapsible container that displays multiple expandable items, perfect for FAQs, product information, or any content that needs to be organized in a space-efficient way.",
+  "options": {
+    "is_page": false,
+    "singleton": false,
+    "sub_title": [],
+    "title": "title"
+  }
+}

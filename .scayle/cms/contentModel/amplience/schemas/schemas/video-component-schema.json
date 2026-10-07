@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scayle.com/schemas/video-component.json",
+  "title": "Video",
+  "description": "Displays a video with a preview image. The video can autoplay or require user interaction to start.",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "video": {
+      "title": "Video",
+      "description": "The video file to display.",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/video-link"
+        }
+      ]
+    },
+    "poster_image": {
+      "title": "Preview Image - Desktop",
+      "description": "Thumbnail image shown before video plays on desktop.",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        }
+      ]
+    },
+    "poster_image_mobile": {
+      "title": "Preview Image - Mobile",
+      "description": "Thumbnail image for mobile. If not provided, desktop image is used.",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        }
+      ]
+    },
+    "aspect_ratio": {
+      "title": "Aspect Ratio",
+      "description": "Shape and proportions of the video player. Defaults to 16:9.",
+      "type": "string",
+      "enum": [
+        "16:9",
+        "1:1",
+        "4:3"
+      ],
+      "default": "16:9"
+    },
+    "autoplay": {
+      "title": "Autoplay",
+      "type": "boolean",
+      "default": true,
+      "description": "When enabled, video starts automatically on page load. Defaults to enabled."
+    },
+    "loop": {
+      "title": "Loop",
+      "type": "boolean",
+      "default": true,
+      "description": "When enabled, video restarts automatically when it ends. Defaults to enabled."
+    },
+    "muted": {
+      "title": "Muted",
+      "type": "boolean",
+      "default": true,
+      "description": "When enabled, video plays without sound. Defaults to enabled."
+    },
+    "controls": {
+      "title": "Show Controls",
+      "type": "boolean",
+      "default": false,
+      "description": "When enabled, displays video player controls. Defaults to disabled."
+    }
+  },
+  "required": [
+    "video"
+  ],
+  "propertyOrder": [
+    "video",
+    "poster_image",
+    "poster_image_mobile",
+    "aspect_ratio",
+    "autoplay",
+    "loop",
+    "muted",
+    "controls"
+  ]
+}

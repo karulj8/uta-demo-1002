@@ -1,0 +1,5 @@
+{
+  "body": "./schemas/divider-component-schema.json",
+  "schemaId": "https://scayle.com/schemas/divider-component.json",
+  "validationLevel": "CONTENT_TYPE"
+}

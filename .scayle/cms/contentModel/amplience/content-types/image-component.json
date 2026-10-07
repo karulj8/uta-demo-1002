@@ -1,0 +1,16 @@
+{
+  "contentTypeUri": "https://scayle.com/schemas/image-component.json",
+  "status": "ACTIVE",
+  "settings": {
+    "label": "Image",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://bigcontent.io/cms/icons/ca-types-carousel-mini.png"
+      }
+    ],
+    "visualizations": [],
+    "cards": []
+  },
+  "repositories": []
+}

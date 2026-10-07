@@ -1,0 +1,19 @@
+{
+  "contentTypeUri": "https://scayle.com/schemas/divider-component.json",
+  "status": "ACTIVE",
+  "settings": {
+    "label": "Divider",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://bigcontent.io/cms/icons/ca-types-article.png"
+      }
+    ],
+    "visualizations": [],
+    "cards": []
+  },
+  "repositories": [
+    "content",
+    "contentde"
+  ]
+}

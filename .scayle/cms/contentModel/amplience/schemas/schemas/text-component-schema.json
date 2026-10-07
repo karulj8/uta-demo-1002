@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scayle.com/schemas/text-component.json",
+  "title": "Text",
+  "description": "A simple text element that can display as a heading or paragraph. Use this for short text content that doesn't need rich formatting.",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "content": {
+      "title": "Content",
+      "description": "The text to display.",
+      "type": "string"
+    },
+    "textType": {
+      "title": "Text Type",
+      "description": "HTML element type for the text. Defaults to paragraph.",
+      "type": "string",
+      "enum": [
+        "p",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "default": "p"
+    }
+  },
+  "required": [
+    "content"
+  ],
+  "propertyOrder": [
+    "content",
+    "textType"
+  ]
+}

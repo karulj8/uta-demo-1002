@@ -1,0 +1,5 @@
+{
+  "body": "./schemas/smart-sorting-products-slider-component-schema.json",
+  "schemaId": "https://scayle.com/schemas/smart-sorting-products-slider-component.json",
+  "validationLevel": "CONTENT_TYPE"
+}

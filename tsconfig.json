@@ -1,0 +1,14 @@
+{
+  "extends": "./.nuxt/tsconfig.json",
+  "exclude": ["./testing/**/*"],
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "erasableSyntaxOnly": true,
+    "types": ["@types/google.maps"],
+    "plugins": [
+      {
+        "name": "@vue/typescript-plugin"
+      }
+    ]
+  }
+}

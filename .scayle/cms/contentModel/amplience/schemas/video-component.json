@@ -1,0 +1,5 @@
+{
+  "body": "./schemas/video-component-schema.json",
+  "schemaId": "https://scayle.com/schemas/video-component.json",
+  "validationLevel": "CONTENT_TYPE"
+}
